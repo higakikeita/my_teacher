@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'teachers/index'
 
   root "top#index"
+  resources :teachers, only: [:index,:new]
 end
