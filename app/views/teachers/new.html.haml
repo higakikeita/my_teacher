@@ -2,15 +2,15 @@
   .exhibit__page__main
     .exhibit__page__main__contents
       %h3.exhibit__page__main__contents__message
-        商品の情報を入力
+        講師の情報を入力
         = form_for @teacher, html:{class:"form-content"} do |f|
           .sell--content
           .sell--content__name
           %h3.sell--content__name__name
-            商品名
+            講師名
           %span.form--caution 
             必須
           %div
-            = f.text_field :name, class:"product-name__text__field",placeholder: "商品名（必須 40文字まで)"
+            = f.text_field :name, class:"product-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
           .actions
-            =f.submit "出品する",class:"btn--red"
+            =f.submit "登録する",class:"btn--red"
