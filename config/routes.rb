@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'top/index'
+
   get 'teachers/index'
 
-  root "teachers#index"
+  root "top#index"
 end
