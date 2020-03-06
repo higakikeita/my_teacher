@@ -1,0 +1,22 @@
+.exhibit__page{
+  width: 100%;
+  background-color: #EEEEEE;
+  &__main {
+    background-color: #EEEEEE;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+    &__contents {
+      background-color:white;
+      width: 100%;
+      margin: 0 auto;
+      &__message {
+        font-size: 22px;
+        display: block;
+        padding: 32px 16px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}
