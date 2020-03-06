@@ -19,7 +19,7 @@
     / Navigation
     %nav.navbar.navbar-light.bg-light.static-top
       .container
-        %a.navbar-brand{:href => "#"} Start Bootstrap
+        %a.navbar-brand{:href => "#"} 家庭教師のワイズをもっと知る
         %a.btn.btn-primary{:href => "#"} Sign In
     / Masthead
     %header.masthead.text-white.text-center
@@ -86,7 +86,8 @@
         .row
           .col-lg-4
             .testimonial-item.mx-auto.mb-5.mb-lg-0
-              %img.img-fluid.rounded-circle.mb-3{:alt => "", :src => "assets/testimonials-1.jpg"}/
+              %img.img-fluid.rounded-circle.mb-3{:alt => "", :src => "#{asset_path"testimonials-1.jpg"}"}/
+              =image_tag 
               %h5 Margaret E.
               %p.font-weight-light.mb-0 "This is fantastic! Thanks so much guys!"
           .col-lg-4
