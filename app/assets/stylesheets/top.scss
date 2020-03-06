@@ -57,7 +57,7 @@ header.masthead {
 .call-to-action {
   position: relative;
   background-color: $gray-800;
-  background: url('../assets/bg-masthead.jpg') no-repeat center center;
+  background-image: image-url('bg-masthead.jpg') no-repeat center center;
   @include background-cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
