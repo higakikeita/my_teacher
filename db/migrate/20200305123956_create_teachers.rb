@@ -9,6 +9,7 @@ class CreateTeachers < ActiveRecord::Migration[5.0]
       t.integer :career
       t.integer :category_id
       t.integer :prefecture
+      t.integer :subject
       t.timestamps
     end
   end
