@@ -307,36 +307,36 @@
 }
   }
 .exhibit-page__footer {
-width: 100%;
-background-color: #EEEEEE;
-&__content {
-width: 30%;
-margin:0 auto; 
-padding: 40px 0px;
-&__main {
-.exhibit-page__footer__lists {
-font-size:12px;
-.exhibit-page__footer__list {
-  display:inline-block;
-  text-align: center;
-  width: 32%;
-  color:black;
-}
-}
-}
-.exhibit-page__footer__link {
-display:block;
-padding-top:30px;
-height:90px;
-width:90px;
-margin:0 auto;
-}
-.exhibit-page__footer__copyright {
-font-size: 12px;
-text-align: center;
-color:black;
-}
-}
-}
-}
+  width: 100%;
+  background-color: #EEEEEE;
+  &__content {
+  width: 30%;
+  margin:0 auto; 
+  padding: 40px 0px;
+  &__main {
+  .exhibit-page__footer__lists {
+  font-size:12px;
+  .exhibit-page__footer__list {
+    display:inline-block;
+    text-align: center;
+    width: 32%;
+    color:black;
+  }
 
+}
+    .exhibit-page__footer__link {
+    display:block;
+    padding-top:30px;
+    height:90px;
+    width:90px;
+    margin:0 auto;
+    }
+    .exhibit-page__footer__copyright {
+    font-size: 12px;
+    text-align: center;
+    color:black;
+    }
+  }
+}
+}
+}

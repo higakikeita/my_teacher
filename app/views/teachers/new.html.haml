@@ -5,47 +5,50 @@
         講師の情報を入力
         = form_for @teacher, html:{class:"form-content"} do |f|
           .sell--content
-          .sell--content__name
-          %h3.sell--content__name__name
-            講師名
-          %span.form--caution 
-            必須
-          %div
-            = f.text_field :name, class:"product-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
-            .sell--content__description
+            .sell--content__name
+              %h3.sell--content__name__name
+                講師名
+                %span.form--caution 
+                  必須
+            %div
+              = f.text_field :name, class:"product-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
+          .sell--content__description
             %h3.sell--content__description__description
-              商品の説明
-              %span.form--caution 
-                必須
+            自身のアピールポイント
+            %span.form--caution 
+              必須
             =f.text_area :explain,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-            .product-details__form__brand
-              %h3.product-details__form__brand__name
-                大学名
-                %span.form--caution 任意
+          .product-details
+            %h3.product-details__name 講師の詳細
+            .product-details__form
+              .product-details__form__brand
+                %h7.product-details__form__brand__name
+                  大学名
+                  %span.form--caution 任意
+                  .select--wrap
+                    = f.select :university,Teacher.universities.keys,{prompt:"---"}, {class:"select--wrap__default"}
+                    %i.fas.fa-angle-down
+              .product-details__form__size
+                %h7.product-details__form__size__name
+                  性別
+                  %span.form--caution 必須
+                  .select--wrap
+                    = f.select :sex,Teacher.sexes.keys,{prompt:"---"}, {class:"select--wrap__default"}
+                    %i.fas.fa-angle-down
+              .product-details__form__status
+                %h7.product-details__form__status__name
+                  指導可能科目
+                  %span.form--caution 必須
+                  .select--wrap
+                    = f.select :subject,Teacher.subjects.keys,{prompt:"---"}, {class:"select--wrap__default"}
+                    %i.fas.fa-angle-down
+              .delivery-form__box__middle
+                %h7.delivery-form__box__top__name
+                  所属の地域
+                  %span.form--caution 必須
                 .select--wrap
-                  = f.select :university,Teacher.universities.keys,{prompt:"---"}, {class:"select--wrap__default"}
+                  = f.select :prefecture,Teacher.prefectures.keys,{prompt:"---"},{class:"select--wrap__default "}
                   %i.fas.fa-angle-down
-            .product-details__form__size
-              %h3.product-details__form__size__name
-                性別
-                %span.form--caution 必須
-                .select--wrap
-                  = f.select :sex,Teacher.sexes.keys,{prompt:"---"}, {class:"select--wrap__default"}
-                  %i.fas.fa-angle-down
-            .product-details__form__status
-              %h3.product-details__form__status__name
-                指導可能科目
-                %span.form--caution 必須
-                .select--wrap
-                  = f.select :subject,Teacher.subjects.keys,{prompt:"---"}, {class:"select--wrap__default"}
-                  %i.fas.fa-angle-down
-            .delivery-form__box__middle
-              %h3.delivery-form__box__top__name
-                所属の地域
-                %span.form--caution 必須
-              .select--wrap
-                = f.select :prefecture,Teacher.prefectures.keys,{prompt:"---"},{class:"select--wrap__default "}
-                %i.fas.fa-angle-down
           .actions
             =f.submit "登録する",class:"btn--red"
       .exhibit-page__footer
