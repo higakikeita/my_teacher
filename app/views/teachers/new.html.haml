@@ -12,5 +12,6 @@
             必須
           %div
             = f.text_field :name, class:"product-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
+            =f.text_area :explain,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           .actions
             =f.submit "登録する",class:"btn--red"
