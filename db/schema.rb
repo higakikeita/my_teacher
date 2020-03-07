@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200305123956) do
+ActiveRecord::Schema.define(version: 20200307082235) do
+
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "teacher_image", limit: 65535
+    t.integer  "teacher_id",                  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["teacher_id"], name: "index_images_on_teacher_id", using: :btree
+  end
 
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -26,4 +34,5 @@ ActiveRecord::Schema.define(version: 20200305123956) do
     t.datetime "updated_at",                null: false
   end
 
+  add_foreign_key "images", "teachers"
 end
