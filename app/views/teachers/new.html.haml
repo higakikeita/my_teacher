@@ -6,7 +6,7 @@
         = form_for @teacher, html:{class:"form-content"} do |f|
           .img-form
             %h3.img__upload__text
-              出品画像
+              講師画像
               %span.form--caution 
                 必須
             %p.img__upload__comment 最大10枚までアップロードできます
@@ -28,7 +28,7 @@
             自身のアピールポイント
             %span.form--caution 
               必須
-            =f.text_area :explain,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+            =f.text_area :explain,class:"sell--content__text__area",placeholder: "自己アピールしてください（必須 1,000文字以内）（例）大学受験の数学指導に自身があります。"
           .product-details
             %h3.product-details__name 講師の詳細
             .product-details__form
@@ -60,17 +60,18 @@
                 .select--wrap
                   = f.select :prefecture,Teacher.prefectures.keys,{prompt:"---"},{class:"select--wrap__default "}
                   %i.fas.fa-angle-down
-          .actions
+          .submit-button
+            .actions
             =f.submit "登録する",class:"btn--red"
-      .exhibit-page__footer
-        .exhibit-page__footer__content
-          .exhibit-page__footer__content__main
-            %ul.exhibit-page__footer__lists
-              %li.exhibit-page__footer__list
-                プライバシーポリシー
-              %li.exhibit-page__footer__list
-                メルカリ利用規約
-              %li.exhibit-page__footer__list
-                特定商取引に関する表記
-              %p.exhibit-page__footer__copyright
-                © 2020 
+    .exhibit-page__footer
+      .exhibit-page__footer__content
+        .exhibit-page__footer__content__main
+          %ul.exhibit-page__footer__lists
+            %li.exhibit-page__footer__list
+              プライバシーポリシー
+            %li.exhibit-page__footer__list
+              
+            %li.exhibit-page__footer__list
+              
+            %p.exhibit-page__footer__copyright
+              © 2020 ジュピターsolution
