@@ -21,19 +21,19 @@
                 講師名
                 %span.form--caution 
                   必須
-            %div
+            
               = f.text_field :name, class:"product-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
           .sell--content__description
-            %h3.sell--content__description__description
-            自身のアピールポイント
-            %span.form--caution 
-              必須
+            .sell--content__description__description
+              自身のアピールポイント
+              %span.form--caution 
+                必須
             =f.text_area :explain,class:"sell--content__text__area",placeholder: "自己アピールしてください（必須 1,000文字以内）（例）大学受験の数学指導に自身があります。"
           .product-details
-            %h3.product-details__name 講師の詳細
+            .product-details__name 講師の詳細
             .product-details__form
               .product-details__form__brand
-                %h7.product-details__form__brand__name
+                .product-details__form__brand__name
                   大学名
                   %span.form--caution 任意
                   .select--wrap
