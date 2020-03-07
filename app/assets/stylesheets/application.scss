@@ -2,6 +2,7 @@
 @import "modules/teachers";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "color";
 @import "bootstrap";
 @import "variables.scss";
 @import "mixins.scss";
@@ -16,3 +17,5 @@
 // @import "footer.scss";
 @import "top";
 @import "modules/new";
+@import "modules/show";
+
