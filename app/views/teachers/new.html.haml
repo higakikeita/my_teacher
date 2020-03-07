@@ -4,6 +4,17 @@
       %h3.exhibit__page__main__contents__message
         講師の情報を入力
         = form_for @teacher, html:{class:"form-content"} do |f|
+          .img-form
+            %h3.img__upload__text
+              出品画像
+              %span.form--caution 
+                必須
+            %p.img__upload__comment 最大10枚までアップロードできます
+            .dropbox
+              %label.dropbox__img
+                %p ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
+                = f.fields_for :images do |image|
+                  = image.file_field :teacher_image, id: "sell-img"
           .sell--content
             .sell--content__name
               %h3.sell--content__name__name
