@@ -2,12 +2,11 @@
 # 家庭教師派遣センターのwebサイトになります。
 # 自分に合った講師を探すことが出来ます
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Image from Gyazo](https://i.gyazo.com/41fe34ff72cb4c869f590b5ea05811fd.png)](https://gyazo.com/41fe34ff72cb4c869f590b5ea05811fd)
 
-Things you may want to cover:
 
-* Ruby version
+
+* Ruby version 2.5.1
 
 * System dependencies
 
@@ -37,3 +36,13 @@ Things you may want to cover:
 |category_id|integer|
 |subject|integer|
 |user|references|index: true, foreign_key: true|
+### Association
+has_many :images
+
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|teacher|references|null: false, foreign_key: true|
+|teacher_image|text|null: false|
+### Association
+belongs_to :teacher
