@@ -16,7 +16,6 @@
     margin: 16px 0 0;
     @include clearfix;
     &__image{
-      position: relative;
       float:left;
       min-width: 300px;
       max-width: 300px;
@@ -24,6 +23,11 @@
       position: relative;
       margin: 0 auto;
       background-color: #fafafa;
+      img{
+        height: 100%;
+        width: 100%;
+        vertical-align: bottom;
+      }
       .owl-carousel{
         position: relative;
         .owl-stage-outer{

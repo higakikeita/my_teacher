@@ -7,7 +7,7 @@
         =@teacher.explain
       .product-details__page__main__content.clearfix
         .product-details__page__main__content__image
-          -# =image_tag(@product.images[0].product_image.url)
+          =image_tag(@teacher.images[0].teacher_image.url)
           -# -if @product.buyer_id.present? 
           -#   .items-box_photo__sold
           -#     .items-box_photo__sold__inner SOLD

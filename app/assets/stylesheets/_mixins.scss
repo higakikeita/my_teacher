@@ -63,3 +63,10 @@
   border-radius: 40px;
   color: #333;
 }
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
