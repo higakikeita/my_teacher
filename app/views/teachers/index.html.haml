@@ -1,8 +1,144 @@
-%h1 Teachers#index
-%p Find me in app/views/teachers/index.html.erb
-%h2 ひがきけいた
+.main-section
+  .header
+    -# -if user_signed_in?
+    -#   =render "home/header_login"
+    -# -else
+    -#   =render "home/header_unlogin"
 
-%p このページは仮のトップページです。
+  %ul.slick
+    %li.slick-list
+      = image_tag("topPageSlider1.png", id: "slider-image")
+      .slick__text
+        .slick__text--large
+          スマホで かんたん
+          %br
+          フリマアプリ
+        .slick__text--small
+          メルカリはスマホカメラからすぐに出品できる
+          %br
+          購入時も安心な独自システムのアプリです
+      %ul.slick__link--tag
+        %li.link__apple
+          = link_to image_tag('download_on_the_AppStore_badge.svg', id: "appstore"), "https://apps.apple.com/jp/app/id667861049?l=ja"
+        %li.link__google
+          = link_to image_tag('google-play-badge.svg', id: "googleplay"), "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja"
+    %li.slick-list
+      = image_tag("topPageSlider2.png", id: "slider-image")
+
+  .pickup-section
+    .pickup-section__header
+      .pickup-section__header--title
+        人気のカテゴリー
+      %ul.pickup-section__header--list
+        %li.header__list--logo
+          レディース
+        %li.header__list--logo
+          メンズ
+        %li.header__list--logo
+          家電・スマホ・カメラ
+        %li.header__list--logo
+          おもちゃ・ホビー・グッズ
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          レディース新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @ladies.each do |product|
+        -#   = render "product", product: product 
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          メンズ新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @men.each do |product|
+        -#   = render "product", product: product
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          家電・スマホ・カメラ新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @home_appliances.each do |product|
+        -#   = render "product", product: product
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          おもちゃ・ホビー・グッズ新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @hobbies.each do |product|
+        -#   = render "product", product: product
+
+  .pickup-section
+    .pickup-section__header
+      .pickup-section__header--title
+        人気のブランド
+      %ul.pickup-section__header--list
+        %li.header__list--logo
+          シャネル
+        %li.header__list--logo
+          グッチ
+        %li.header__list--logo
+          プラダ
+        %li.header__list--logo
+          エルメス
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          シャネル新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @chanel.each do |product|
+        -#   = render "product", product: product
+        
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          グッチ新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @gucci.each do |product|
+        -#   = render "product", product: product
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          プラダ新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @prada.each do |product|
+        -#   = render "product", product: product
+
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          エルメス新着アイテム
+        .main__title--more
+          もっと見る >
+      %ul.pickup-section__main--products
+        -# - @hermes.each do |product|
+        -#   = render "product", product: product
+
+-#   = render "bottom"
+
+-# = render "sell-tab"
+
+-# =render "home/footer"
+
 = link_to "仮のボタンです", "#", class: "btn btn-primary"
 .footer
   .footer__contents
