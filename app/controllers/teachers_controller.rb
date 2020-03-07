@@ -1,8 +1,8 @@
 class TeachersController < ApplicationController
-before_action :set_teacher,only: [:index,:show]
+
 
   def index
-      
+    @teachers=Teacher.all
   end
 
   def new
@@ -14,7 +14,7 @@ before_action :set_teacher,only: [:index,:show]
     if @teacher.images.present?
     @teacher.save
     
-      redirect_to root_path
+      redirect_to teachers_path
     
       
     else
@@ -23,13 +23,12 @@ before_action :set_teacher,only: [:index,:show]
     end
   end
   def show
+    @teacher = Teacher.find(params[:id])
   end
   
 private
   def teacher_params
     params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:brand_id,:status,:postage,:shipping_date,:prefecture,:university,images_attributes:[:teacher_image,:id])
   end
-  def set_teacher
-    @teacher = Teacher.find(params[:id])
-  end
+  
 end

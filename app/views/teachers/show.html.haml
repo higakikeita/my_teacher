@@ -23,7 +23,7 @@
         %table.product-details__page__main__content__right
           %tbody
             %tr
-              %th 出品者
+              %th 講師名
               %td 
                 =@teacher.name
                 %div
@@ -40,17 +40,17 @@
                     %span
                       = @bad_count
             %tr
-              %th カテゴリー
+              %th 担当科目
               %td=@teacher.subject
             %tr
-              %th ブランド
+              %th 出身大学
               %td=@teacher.university
             %tr
-              %th 商品の状態
+              %th 性別
               %td=@teacher.sex
             
             %tr
-              %th 配送元地域
+              %th 講師担当地域
               %td=@teacher.prefecture
             
         .product-details-page__price
@@ -92,7 +92,7 @@
         .message-container
           .product-details-comment-form__contents
         .product-details-comment-form__comment
-          %h4 ＜コメント一覧＞
+          %h4 ＜先生にコメントしてみよう＞
           .comments-block
             -# - if @product.comments
             -#   - @product.comments.each do |comment|
