@@ -2,7 +2,10 @@ class TeachersController < ApplicationController
 
 
   def index
-    @teachers=Teacher.all
+    @elementary = Teacher.category(1)
+    @junior_high = Teacher.category(2)
+    @highschool = Teacher.category(3)
+    @entarance_exam = Teacher.category(4)
   end
 
   def new
