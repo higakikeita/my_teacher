@@ -46,3 +46,12 @@ has_many :images
 |teacher_image|text|null: false|
 ### Association
 belongs_to :teacher
+
+## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|ancestry|string||
+
+### Association
+- has_many : teachers
