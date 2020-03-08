@@ -32,6 +32,14 @@
           .product-details
             .product-details__name 講師の詳細
             .product-details__form
+              .product-details__form__category
+                .product-details__form__category__name
+                  コース選択
+                  %span.form--caution 必須
+
+                  .select--wrap{id: "category__box--parent"}
+                    = f.collection_select :category_id, Category.all.limit(13), :id, :name,{prompt:"---"},{class:"select--wrap-cat1__default-category1", id: "parent_form"}
+                    %i.fas.fa-angle-down
               .product-details__form__brand
                 .product-details__form__brand__name
                   大学名
