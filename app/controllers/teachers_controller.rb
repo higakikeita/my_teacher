@@ -33,6 +33,14 @@ class TeachersController < ApplicationController
       end
     end
   end
+  def search_grandchild
+    respond_to do |format|
+      format.html
+      format.json do
+        @grandchildren = Category.find(params[:child_id]).children
+      end
+    end
+  end
   
 private
   def teacher_params
