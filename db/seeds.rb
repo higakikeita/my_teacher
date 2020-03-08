@@ -40,3 +40,12 @@ entarance_exam_3      =entarance_exam.children.create(name:"国語")
 entarance_exam_4      =entarance_exam.children.create(name:"理科")
 entarance_exam_5      =entarance_exam.children.create(name:"社会")
 
+#孫階層大学受験
+entarance_exam_1.children.create([{name: "国立文系"},{name: "私立文系"},{name: "国立理系"},{name: "私立理系"},{name: "その他"}])
+
+entarance_exam_2.children.create([{name: "数I"},{name: "数II"},{name: "数A"},{name: "数B"},{name:"数Ⅲ"},{name: "その他"}])
+
+entarance_exam_3.children.create([{name: "現代文"},{name: "古典"},{name: "漢文"},{name: "その他"}])
+
+entarance_exam_4.children.create([{name: "物理"},{name: "化学"},{name: "生物"},{name: "地学"}])
+entarance_exam_5.children.create([{name: "日本史"},{name: "世界史"},{name: "地理"},{name: "倫理・政経"},{name: "現代社会"}])
