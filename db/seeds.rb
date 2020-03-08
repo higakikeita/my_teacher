@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#親階層
+elementary            =Category.create(name:"小学生")
+entrance_junior       =Category.create(name:"中学受験")
+junior_high           =Category.create(name:"中学生一般")
+entrance_high         =Category.create(name:"高校受験")
+highschool            =Category.create(name:"高校生一般")
+entarance_exam        =Category.create(name:"大学受験")
+
+
