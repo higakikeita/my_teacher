@@ -4,7 +4,7 @@ $(function () {
     var html = `<option value="${category.name}" data-category="${category.id}">${category.name}</option>`;
     return html;
   }
-
+  console.log('こたろ')
   // 子カテゴリーの表示作成
   function appendChildrenBox(insertHTML) {
     var childSelectHtml = '';
@@ -42,7 +42,7 @@ $(function () {
       $('#category__box--children').remove();
       $('#category__box--grandchildren').remove();
       $.ajax({
-        url: '/products/search_child',
+        url: '/teachers/search_child',
         type: 'GET',
         data: {
           parent_id: parentValue
@@ -73,7 +73,7 @@ $(function () {
     var childValue = $('#child_form option:selected').data('category');
     if (childValue != "---") {
       $.ajax({
-        url: '/products/search_grandchild',
+        url: '/teachers/search_grandchild',
         type: 'GET',
         data: {
           child_id: childValue
