@@ -100,8 +100,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @chanel.each do |product|
-        -#   = render "product", product: product
+        - @arithmatic.each do |teacher|
+          = render "teacher", teacher: teacher
         
     .pickup-section__main
       .pickup-section__main--title

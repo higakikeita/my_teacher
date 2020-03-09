@@ -3,9 +3,13 @@ class TeachersController < ApplicationController
 
   def index
     @elementary = Teacher.category(1)
+    @entarance_junior =Teacher.category(2)
     @junior_high = Teacher.category(3)
+    @entrance_high = Teacher.category(4)
     @highschool = Teacher.category(5)
     @entrance_exam = Teacher.category(6)
+    @arithmatic =Teacher.subject(0)
+
   end
 
   def new
@@ -47,7 +51,7 @@ class TeachersController < ApplicationController
   
 private
   def teacher_params
-    params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:brand_id,:status,:postage,:shipping_date,:prefecture,:university,images_attributes:[:teacher_image,:id])
+    params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:subject,:status,:postage,:shipping_date,:prefecture,:university,images_attributes:[:teacher_image,:id])
   end
   
 end
