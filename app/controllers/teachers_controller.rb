@@ -32,7 +32,7 @@ class TeachersController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        @children = Category.find(params[:parent_id]).children
+      @children = Category.find(params[:parent_id]).children
       end
     end
   end
@@ -40,7 +40,7 @@ class TeachersController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        @grandchildren = Category.find(params[:child_id]).children
+      @grandchildren = Category.find(params[:child_id]).children
       end
     end
   end

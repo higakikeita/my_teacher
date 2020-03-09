@@ -17,4 +17,5 @@ has_many :images
 # mount_uploader :image, ImageUploader
 accepts_nested_attributes_for :images, allow_destroy: true
 belongs_to :category
+scope :category, ->(category_id) {where(category_id: category_id).order(created_at: "DESC").limit(10)}
 end

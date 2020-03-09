@@ -19,7 +19,7 @@ $(function () {
                       `;
     $('.product-details__form__category').append(childSelectHtml);
   }
-
+  console.log('あやや')
   // 孫カテゴリーの表示作成
   function appendGrandchildrenBox(insertHTML) {
     var grandchildSelectHtml = '';
@@ -34,7 +34,7 @@ $(function () {
                            `;
     $('.product-details__form__category').append(grandchildSelectHtml);
   }
-
+  console.log('ひがき')
   // 子要素のアクション
   $("#parent_form").on("change", function () {
     var parentValue = document.getElementById("parent_form").value;
