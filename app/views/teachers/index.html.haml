@@ -46,8 +46,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @ladies.each do |product|
-        -#   = render "product", product: product 
+        - @elementary.each do |teacher|
+          = render "teacher", teacher: teacher 
 
     .pickup-section__main
       .pickup-section__main--title
@@ -56,8 +56,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @men.each do |product|
-        -#   = render "product", product: product
+        - @junior_high.each do |teacher|
+          = render "teacher", teacher: teacher
 
     .pickup-section__main
       .pickup-section__main--title
@@ -66,8 +66,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @home_appliances.each do |product|
-        -#   = render "product", product: product
+        - @highschool.each do |teacher|
+          = render "teacher", teacher: teacher
 
     .pickup-section__main
       .pickup-section__main--title
@@ -76,8 +76,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @hobbies.each do |product|
-        -#   = render "product", product: product
+        - @entrance_exam.each do |teacher|
+          = render "teacher", teacher: teacher
 
   .pickup-section
     .pickup-section__header

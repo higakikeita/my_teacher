@@ -3,9 +3,9 @@ class TeachersController < ApplicationController
 
   def index
     @elementary = Teacher.category(1)
-    @junior_high = Teacher.category(2)
-    @highschool = Teacher.category(3)
-    @entarance_exam = Teacher.category(4)
+    @junior_high = Teacher.category(3)
+    @highschool = Teacher.category(5)
+    @entrance_exam = Teacher.category(6)
   end
 
   def new
