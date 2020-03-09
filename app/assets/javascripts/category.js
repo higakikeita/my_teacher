@@ -4,7 +4,7 @@ $(function () {
     var html = `<option value="${category.name}" data-category="${category.id}">${category.name}</option>`;
     return html;
   }
-  console.log('こたろ')
+  console.log(this)
   // 子カテゴリーの表示作成
   function appendChildrenBox(insertHTML) {
     var childSelectHtml = '';
@@ -19,7 +19,7 @@ $(function () {
                       `;
     $('.product-details__form__category').append(childSelectHtml);
   }
-  console.log('あやや')
+  console.log(this)
   // 孫カテゴリーの表示作成
   function appendGrandchildrenBox(insertHTML) {
     var grandchildSelectHtml = '';
@@ -34,7 +34,7 @@ $(function () {
                            `;
     $('.product-details__form__category').append(grandchildSelectHtml);
   }
-  console.log('ひがき')
+  console.log(this)
   // 子要素のアクション
   $("#parent_form").on("change", function () {
     var parentValue = document.getElementById("parent_form").value;
@@ -51,6 +51,7 @@ $(function () {
       })
 
         .done(function (children) {
+          console.log(this)
           $('#category__box--children').remove();
           $('#category__box--grandchildren').remove();
           var insertHTML = '';
