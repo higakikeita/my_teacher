@@ -20,7 +20,9 @@
     %nav.navbar.navbar-light.bg-light.static-top
       .container
         %a.navbar-brand{:href => "https://school-wise.jp/",class: "btn btn-primary-b"} ワイズをもっと知る
-        %a.btn.btn-primary{:href => "#"} Sign In
+        -# %a.btn.btn-primary{:href => "#"} Sign In
+        = link_to "メールアドレスでログインする", new_user_session_path, class: ".btn.btn-primary"
+
     / Masthead
     %header.masthead.text-white.text-center
       .overlay
