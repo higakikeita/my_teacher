@@ -274,3 +274,8 @@
       }
     }
 }
+
+.product-details-delete__btn {
+  background:#aaa;
+  @include product-buy;
+}
