@@ -22,7 +22,7 @@
         %a.navbar-brand{:href => "https://school-wise.jp/",class: "btn btn-primary-b"} ワイズをもっと知る
         -# %a.btn.btn-primary{:href => "#"} Sign In
         = link_to "メールアドレスでログインする", new_user_session_path, class: "btn loginPage_contents_btn"
-
+        = link_to "新規会員登録", new_user_registration_path, class: "btn loginPage_contents_btn"
     / Masthead
     %header.masthead.text-white.text-center
       .overlay
@@ -61,8 +61,11 @@
             .features-icons-item.mx-auto.mb-0.mb-lg-3
               .features-icons-icon.d-flex
                 %i.icon-check.m-auto.text-primary
-              %h3 Easy to Use
-              %p.lead.mb-0 Ready to use with your own content, or customize the source files!
+              %h3 自分に合った先生を何回でも選べます
+              %p.lead.mb-0 
+                %button.btn.btn-block.btn-lg.btn-primary　
+                = link_to "講師一覧はこちら", teachers_path,class:"btn.btn-block.btn-lg.btn-primary"
+                
     / Image Showcases
     %section.showcase
       .container-fluid.p-0
