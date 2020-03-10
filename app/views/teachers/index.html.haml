@@ -7,7 +7,7 @@
 
   %ul.slick
     %li.slick-list
-      = image_tag("topPageSlider1.png", id: "slider-image")
+      = image_tag("photo_2.jpg", id: "slider-image")
       .slick__text
         .slick__text--large
           スマホで かんたん
@@ -110,8 +110,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @gucci.each do |product|
-        -#   = render "product", product: product
+        - @mathematic.each do |teacher|
+          = render "teacher", teacher: teacher
 
     .pickup-section__main
       .pickup-section__main--title
@@ -120,8 +120,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @prada.each do |product|
-        -#   = render "product", product: product
+        - @japanese.each do |teacher|
+          = render "teacher", teacher: teacher
 
     .pickup-section__main
       .pickup-section__main--title
@@ -130,8 +130,8 @@
         .main__title--more
           もっと見る >
       %ul.pickup-section__main--products
-        -# - @hermes.each do |product|
-        -#   = render "product", product: product
+        - @english.each do |teacher|
+          = render "teacher", teacher: teacher
 
 -#   = render "bottom"
 

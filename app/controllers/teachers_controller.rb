@@ -11,6 +11,7 @@ class TeachersController < ApplicationController
     @arithmatic =Teacher.subject(0)
     @english = Teacher.subject(5)
     @japanese = Teacher.subject(9)
+    @mathematic = Teacher.subject(8)
   end
 
   def new
