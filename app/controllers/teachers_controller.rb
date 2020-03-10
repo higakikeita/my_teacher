@@ -9,7 +9,8 @@ class TeachersController < ApplicationController
     @highschool = Teacher.category(5)
     @entrance_exam = Teacher.category(6)
     @arithmatic =Teacher.subject(0)
-
+    @english = Teacher.subject(5)
+    @japanese = Teacher.subject(9)
   end
 
   def new
