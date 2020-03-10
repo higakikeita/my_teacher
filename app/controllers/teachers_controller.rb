@@ -34,6 +34,13 @@ class TeachersController < ApplicationController
   def show
     @teacher = Teacher.find(params[:id])
   end
+  def destroy
+    teacher =Teacher.find(params[:id])
+    teacher.destroy
+    redirect_to root_path,notice: '削除しました'
+    
+    
+  end
   def search_child
     respond_to do |format|
       format.html
