@@ -2,7 +2,7 @@
 # 家庭教師派遣センターのwebサイトになります。
 # 自分に合った講師を探すことが出来ます
 
-[![Image from Gyazo](https://i.gyazo.com/41fe34ff72cb4c869f590b5ea05811fd.png)](https://gyazo.com/41fe34ff72cb4c869f590b5ea05811fd)
+[![Image from Gyazo](https://i.gyazo.com/0654ab59c02fe8bd97ef7811ed4c8704.png)](https://gyazo.com/0654ab59c02fe8bd97ef7811ed4c8704)
 
 # サイトURL
 
