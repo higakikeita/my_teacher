@@ -4,7 +4,9 @@
 
 [![Image from Gyazo](https://i.gyazo.com/41fe34ff72cb4c869f590b5ea05811fd.png)](https://gyazo.com/41fe34ff72cb4c869f590b5ea05811fd)
 
+# サイトURL
 
+http://13.112.152.26/
 
 * Ruby version 2.5.1
 
@@ -55,3 +57,13 @@ belongs_to :teacher
 
 ### Association
 - has_many : teachers
+## users テーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false, unique:true|
+|password|string|null: false|
+|avatar|text||
+|self_introduction|string||
+|sex|integer|null: false|
+|imag_name|date|null: false|
