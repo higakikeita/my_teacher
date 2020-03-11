@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-
+before_action :set_teacher, only: [:show,:edit,:update]
 
   def index
     @elementary = Teacher.category(1)
@@ -32,7 +32,7 @@ class TeachersController < ApplicationController
     end
   end
   def show
-    @teacher = Teacher.find(params[:id])
+    
   end
   def destroy
     teacher =Teacher.find(params[:id])
@@ -40,10 +40,10 @@ class TeachersController < ApplicationController
     redirect_to root_path,notice: '削除しました'
   end
   def edit
-    @teacher =Teacher.find(params[:id])
+    
   end
   def update
-    @teacher = Teacher.find(params[:id])
+    
     if @teacher.update(update_params)
       redirect_to teacher_path
     else
@@ -75,5 +75,7 @@ private
   def update_params
     params.require(:teacher).permit(:name, :explain,:sex, :university, :category_id, :status,:category_id, :prefecture,:subject, :user_id, images_attributes: [:teacher_image, :id])
   end
-  
+  def set_teacher
+    @teacher = Teacher.find(params[:id])
+  end 
 end
