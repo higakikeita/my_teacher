@@ -32,7 +32,10 @@
           .col-md-10.col-lg-8.col-xl-7.mx-auto
             %form
               .form-row__top
+              -if user_signed_in?
                 = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+              - else
+                = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
                 -# .col-12.col-md-9.mb-2.mb-md-0
                 -#   %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
                 -# .col-12.col-md-3
