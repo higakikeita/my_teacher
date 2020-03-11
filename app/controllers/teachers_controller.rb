@@ -38,8 +38,9 @@ class TeachersController < ApplicationController
     teacher =Teacher.find(params[:id])
     teacher.destroy
     redirect_to root_path,notice: '削除しました'
-    
-    
+  end
+  def edit
+    @teacher =Teacher.find(params[:id])
   end
   def search_child
     respond_to do |format|
