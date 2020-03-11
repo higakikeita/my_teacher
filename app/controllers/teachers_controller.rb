@@ -42,6 +42,15 @@ class TeachersController < ApplicationController
   def edit
     @teacher =Teacher.find(params[:id])
   end
+  def update
+    @teacher = Teacher.find(params[:id])
+    if @teacher.update(update_params)
+      redirect_to teacher_path
+    else
+      render :edit
+    end
+
+  end
   def search_child
     respond_to do |format|
       format.html
@@ -61,7 +70,10 @@ class TeachersController < ApplicationController
   
 private
   def teacher_params
-    params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:subject,:status,:postage,:shipping_date,:prefecture,:university,images_attributes:[:teacher_image,:id])
+    params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:subject,:prefecture,:university,images_attributes:[:teacher_image,:id])
+  end
+  def update_params
+    params.require(:teacher).permit(:name, :explain,:sex, :university, :category_id, :status,:category_id, :prefecture,:subject, :user_id, images_attributes: [:teacher_image, :id])
   end
   
 end
