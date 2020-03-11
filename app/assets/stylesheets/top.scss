@@ -133,7 +133,7 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-btn.btn-primary-b{
+.btn-primary-b{
  color: white;
 }
 .loginPage {
@@ -156,4 +156,11 @@ btn.btn-primary-b{
       color: #fff;
     }
   }
+}
+.form-row__top{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  margin-top: 20px;
 }

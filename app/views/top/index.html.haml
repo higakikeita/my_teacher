@@ -17,12 +17,7 @@
     -# %link{:href => "css/landing-page.min.css", :rel => "stylesheet"}/
   %body
     / Navigation
-    %nav.navbar.navbar-light.bg-light.static-top
-      .container
-        %a.navbar-brand{:href => "https://school-wise.jp/",class: "btn btn-primary-b"} ワイズをもっと知る
-        -# %a.btn.btn-primary{:href => "#"} Sign In
-        = link_to "メールアドレスでログインする", new_user_session_path, class: "btn loginPage_contents_btn"
-        = link_to "新規会員登録", new_user_registration_path, class: "btn loginPage_contents_btn"
+    =render "headcontainer"
     / Masthead
     %header.masthead.text-white.text-center
       .overlay
@@ -36,11 +31,12 @@
               
           .col-md-10.col-lg-8.col-xl-7.mx-auto
             %form
-              .form-row
-                .col-12.col-md-9.mb-2.mb-md-0
-                  %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
-                .col-12.col-md-3
-                  %button.btn.btn-block.btn-lg.btn-primary{:type => "submit"} Sign up!
+              .form-row__top
+                = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+                -# .col-12.col-md-9.mb-2.mb-md-0
+                -#   %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
+                -# .col-12.col-md-3
+                -#   %button.btn.btn-block.btn-lg.btn-primary{:type => "submit"} Sign up!
     / Icons Grid
     %section.features-icons.bg-light.text-center
       .container
