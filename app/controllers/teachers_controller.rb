@@ -3,7 +3,7 @@ before_action :set_teacher, only: [:show,:edit,:update]
 
   def index
     @elementary = Teacher.category(1)
-    @entarance_junior =Teacher.category(2)
+    @entrance_junior =Teacher.category(2)
     @junior_high = Teacher.category(3)
     @entrance_high = Teacher.category(4)
     @highschool = Teacher.category(5)
