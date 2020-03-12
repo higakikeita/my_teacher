@@ -10,6 +10,7 @@ class CreateTeachers < ActiveRecord::Migration[5.0]
       t.integer :category_id
       t.integer :prefecture
       t.integer :subject
+      t.references :user,index: true, foreign_key: true
       t.timestamps
     end
   end

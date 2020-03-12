@@ -14,7 +14,7 @@ enum prefecture:{
   "福岡県":40,"佐賀県":41,"長崎県":42,"熊本県":43,"大分県":44,"宮崎県":45,"鹿児島県":46,"沖縄県":47
 }
 has_many :images, dependent: :destroy
-
+belongs_to :user
 accepts_nested_attributes_for :images, allow_destroy: true
 belongs_to :category
 scope :category, ->(category_id) {where(category_id: category_id).order(created_at: "DESC").limit(10)}
