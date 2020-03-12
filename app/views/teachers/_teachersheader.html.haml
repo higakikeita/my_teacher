@@ -2,22 +2,26 @@
   .container{href: "https://school-wise.jp/"} 
     %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "20%"}/
 
-    
-    
-    
+    .more-information
     お問い合わせ<br> 0120-446-104
-%span.nav_toggle
-  %i
-  %i
-  %i
-%nav.nav
-  %ul.nav_menu_ul
-    %li.nav_menu_li
-      %a{:href => "#"} TOP
-    %li.nav_menu_li
-      %a{:href => "#"} ABOUT
-    %li.nav_menu_li
-      %a{:href => "#"} BLOG
-    %li.nav_menu_li
-      %a{:href => "#"} CONTACT
+    #navArea
+  
+      %nav-a
+        .inner
+          %ul
+          
+          %li
+            %a{:href => "#"} TOPへ戻る
+          %li
+            %a{:href => "#index2"} 学年別選択
+          %li
+            %a{:href => "#index3"} 科目別選択
+          %li
+            %a{:href => "#"} 無料サポート
+      .toggle_btn
+        %span
+        %span
+        %span
+      #mask
+      
 
