@@ -144,7 +144,7 @@
           .main__title--more
           %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
-        - @japanese.each do |teacher|
+        - @mathematic.each do |teacher|
           = render "teacher", teacher: teacher
 
     .pickup-section__main
@@ -165,7 +165,7 @@
           .main__title--more
           %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
-        - @english.each do |teacher|
+        - @mathematic.each do |teacher|
           = render "teacher", teacher: teacher
     .pickup-section__main
       .pickup-section__main--title
@@ -185,7 +185,7 @@
           .main__title--more
           %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
-        - @english.each do |teacher|
+        - @japanese.each do |teacher|
           = render "teacher", teacher: teacher
     .pickup-section__main
       .pickup-section__main--title
