@@ -7,6 +7,7 @@
   
   .pickup-section
     .pickup-section__header
+      #index
       .pickup-section__header--title
         学年から先生を選んでみよう
       %ul.pickup-section__header--list
@@ -35,40 +36,59 @@
 
     .pickup-section__main
       .pickup-section__main--title
-        .main__title--text
-          小学生コースの指導陣
-        .main__title--more
-          もっと見る >
+        #elementary
+          .main__title--text
+            小学生コースの指導陣
+          .main__title--more
+          %a.button{:href => "#index"} ▲ 目次にもどる
       %ul.pickup-section__main--products
         - @elementary.each do |teacher|
           = render "teacher", teacher: teacher 
 
     .pickup-section__main
       .pickup-section__main--title
-        .main__title--text
-          中学生コースの講師陣
-        .main__title--more
-          もっと見る >
+        #junior_high
+          .main__title--text
+            中学生コースの講師陣
+          .main__title--more
+          %a.button{:href => "#index"} ▲ 目次にもどる
       %ul.pickup-section__main--products
         - @junior_high.each do |teacher|
           = render "teacher", teacher: teacher
 
     .pickup-section__main
       .pickup-section__main--title
-        .main__title--text
-          高校生コースの講師陣
-        .main__title--more
-          もっと見る >
+        #highschool
+          .main__title--text
+            高校生コースの講師陣
+          .main__title--more
+          %a.button{:href => "#index"} ▲ 目次にもどる
       %ul.pickup-section__main--products
         - @highschool.each do |teacher|
           = render "teacher", teacher: teacher
+    .pickup-section__main
+      .pickup-section__main--title
+        #entrance_junior
+          .main__title--text
+            中学受験コースの講師陣
+          .main__title--more
+          %a.button{:href => "#index"} ▲ 目次にもどる
+    .pickup-section__main
+      .pickup-section__main--title
+        #entrance_high
+          .main__title--text
+            高校受験コースの講師陣
+          .main__title--more
+          %a.button{:href => "#index"} ▲ 目次にもどる
+            
 
     .pickup-section__main
       .pickup-section__main--title
-        .main__title--text
-          大学受験コースの講師陣
-        .main__title--more
-          もっと見る >
+        #entrance_exam
+          .main__title--text
+            大学受験コースの講師陣
+          .main__title--more
+          %a.button{:href => "#index"} ▲ 目次にもどる
       %ul.pickup-section__main--products
         - @entrance_exam.each do |teacher|
           = render "teacher", teacher: teacher
