@@ -7,7 +7,7 @@
   
   .pickup-section
     .pickup-section__header
-      #index
+      #index2
       .pickup-section__header--title
         学年から先生を選んでみよう
       %ul.pickup-section__header--list
@@ -31,7 +31,7 @@
           .main__title--text
             小学生コースの指導陣
           .main__title--more
-          %a.button{:href => "#index"} ▲ 目次にもどる
+          %a.button{:href => "#index2"} ▲ コース別にもどる
       %ul.pickup-section__main--products
         - @elementary.each do |teacher|
           = render "teacher", teacher: teacher 
@@ -42,7 +42,7 @@
           .main__title--text
             中学生コースの講師陣
           .main__title--more
-          %a.button{:href => "#index"} ▲ 目次にもどる
+          %a.button{:href => "#index2"} ▲ コース別にもどる
       %ul.pickup-section__main--products
         - @junior_high.each do |teacher|
           = render "teacher", teacher: teacher
@@ -53,7 +53,7 @@
           .main__title--text
             高校生コースの講師陣
           .main__title--more
-          %a.button{:href => "#index"} ▲ 目次にもどる
+          %a.button{:href => "#index2"} ▲ コース別にもどる
       %ul.pickup-section__main--products
         - @highschool.each do |teacher|
           = render "teacher", teacher: teacher
@@ -63,7 +63,7 @@
           .main__title--text
             中学受験コースの講師陣
           .main__title--more
-          %a.button{:href => "#index"} ▲ 目次にもどる
+          %a.button{:href => "#index2"} ▲ コース別にもどる
       %ul.pickup-section__main--products
         - @entrance_junior.each do |teacher|
           = render "teacher", teacher: teacher 
@@ -74,7 +74,7 @@
           .main__title--text
             高校受験コースの講師陣
           .main__title--more
-          %a.button{:href => "#index"} ▲ 目次にもどる
+          %a.button{:href => "#index2"} ▲ コース別にもどる
       %ul.pickup-section__main--products
         - @entrance_high.each do |teacher|
           = render "teacher", teacher: teacher 
@@ -85,13 +85,14 @@
           .main__title--text
             大学受験コースの講師陣
           .main__title--more
-          %a.button{:href => "#index"} ▲ 目次にもどる
+          %a.button{:href => "#index2"} ▲ コースにもどる
       %ul.pickup-section__main--products
         - @entrance_exam.each do |teacher|
           = render "teacher", teacher: teacher
 
   .pickup-section
     .pickup-section__header
+      #index3
       .pickup-section__header--title
         科目から選ぶ
       %ul.pickup-section__header--list
@@ -119,7 +120,7 @@
           .main__title--text
             小学算数講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @arithmatic.each do |teacher|
           = render "teacher", teacher: teacher
@@ -130,7 +131,7 @@
           .main__title--text
             小学英語講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @mathematic.each do |teacher|
           = render "teacher", teacher: teacher
@@ -141,7 +142,7 @@
           .main__title--text
             中学数学講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @japanese.each do |teacher|
           = render "teacher", teacher: teacher
@@ -152,7 +153,7 @@
           .main__title--text
             中学英語講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
@@ -162,7 +163,7 @@
           .main__title--text
             高校数学講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
@@ -172,7 +173,7 @@
           .main__title--text
             高校英語講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
@@ -182,7 +183,7 @@
           .main__title--text
             高校国語講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
@@ -192,7 +193,7 @@
           .main__title--text
             高校理科講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
@@ -203,7 +204,7 @@
           .main__title--text
             高校社会講師陣
           .main__title--more
-            もっと見る >
+          %a.button{:href => "#index3"} ▲ 科目別にもどる
       %ul.pickup-section__main--products
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
