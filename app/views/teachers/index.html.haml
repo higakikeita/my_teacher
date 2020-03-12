@@ -10,14 +10,28 @@
       .pickup-section__header--title
         学年から先生を選んでみよう
       %ul.pickup-section__header--list
-        %li.header__list--logo{id:"#{elementary}"}
-          小学生コース
-        %li.header__list--logo{id:"#{junior-high}"}
-          中学生コース
-        %li.header__list--logo{id:"#{highschool}"}
-          高校生一般コース
-        %li.header__list--logo{id:"#{entrance-exam}"}
-          大学受験コース
+        %li
+          %a{href: "#elementary"} 小学生コース
+        %li
+          %a{href: "#entrance_junior"} 中学受験コース
+        %li
+          %a{href: "#junior_high"} 中学生コース
+        %li
+          %a{href: "#entrance_high"} 高校受験コース
+        %li
+          %a{href: "#highschool"} 高校生一般
+        %li
+          %a{href: "#entrance_exam"} 大学受験
+
+
+        -# %li.header__list--logo{id:"#{elementary}"}
+        -#   小学生コース
+        -# %li.header__list--logo{id:"#{junior-high}"}
+        -#   中学生コース
+        -# %li.header__list--logo{id:"#{highschool}"}
+        -#   高校生一般コース
+        -# %li.header__list--logo{id:"#{entrance-exam}"}
+        -#   大学受験コース
 
     .pickup-section__main
       .pickup-section__main--title
