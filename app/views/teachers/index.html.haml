@@ -73,6 +73,10 @@
             中学受験コースの講師陣
           .main__title--more
           %a.button{:href => "#index"} ▲ 目次にもどる
+      %ul.pickup-section__main--products
+        - @entrance_junior.each do |teacher|
+          = render "teacher", teacher: teacher 
+
     .pickup-section__main
       .pickup-section__main--title
         #entrance_high
@@ -80,7 +84,9 @@
             高校受験コースの講師陣
           .main__title--more
           %a.button{:href => "#index"} ▲ 目次にもどる
-            
+      %ul.pickup-section__main--products
+        - @entrance_high.each do |teacher|
+          = render "teacher", teacher: teacher 
 
     .pickup-section__main
       .pickup-section__main--title
