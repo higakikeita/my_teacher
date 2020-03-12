@@ -1,8 +1,12 @@
 .footer{
   height: 100%;
   width: 100%;
+  
   &__contents__about__title{
-    text-align: center;;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
   }
   
 }
