@@ -4,6 +4,21 @@
   %header.masthead.text-white.text-center
     .overlay
       .container
+      .swiper-container
+        -# slide wrapper
+        .swiper-wrapper
+          -# slides
+          .swiper-slide
+            = image_tag 'keichan.jpg', alt: 'swipe01'
+          .swiper-slide
+            = image_tag 'kotaro.jpg', alt: 'swipe02'
+          .swiper-slide
+            = image_tag 'kotaro.jpg', alt: 'swipe03'
+        -# if need navigation button 
+      .swiper-button-prev
+      .swiper-button-next
+      -# if need pagination 
+        .swiper-pagination
   
   .pickup-section
     .pickup-section__header
