@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   var mySwiper = new Swiper('.swiper-container', {
-    autoHeight: true,
+    autoHeight: false,
     loop: true,
     keyboard: true,
     autoplay: {

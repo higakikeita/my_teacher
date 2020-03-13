@@ -1,0 +1,60 @@
+.swiper-slide {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  #swiper-image {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .swiper__text {
+      position: absolute;
+      top: 15px;
+      left: 300px;
+      padding: 20px 40px;
+      font-weight: bold;
+
+    &--large {
+      font-size: 68px;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    &--small {
+      font-size: 24px;
+      margin-bottom: 24px;
+      line-height: 2;
+    }
+  }
+
+  .swiper__link--tag {
+      position: absolute;
+      bottom: 35px;
+      left: 330px;
+      margin: 0px auto;
+      display: flex;
+
+      .link__apple #appstore {
+        height: 50px;
+        width: 170px;
+      }
+
+      .link__google #googleplay {
+        height: 50px;
+        width: 158px;
+        margin-left: 8px;
+      }
+  }
+}
+.swiper-container{
+  height:100%;
+  
+}
