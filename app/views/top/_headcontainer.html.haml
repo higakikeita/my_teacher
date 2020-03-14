@@ -1,15 +1,36 @@
-%nav.navbar.navbar-light.bg-light.static-top
-  .container{:href => "https://school-wise.jp/"} 
+%ul.navbar.navbar-light.bg-light.static-top
+  #navArea
+    
+    %nav-a
+      .inner
+        %ul
+        
+        %li
+          =link_to "TOPへ戻る",root_path
+        %li
+          %a{:href => "#index2"} 学年別選択
+        %li
+          %a{:href => "#index3"} 科目別選択
+        %li
+          %a{:href => "#"} 無料サポート
+        %li
+          %a{:href => "#"} 無料サポート 
+    .toggle_btn
+      %span
+      %span
+      %span
+    #mask
+  %li.container{href: "https://school-wise.jp/"} 
     %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "20%"}/
 
-    
-    =link_to "ワイズとは？","https://school-wise.jp/",class:"btn loginPage_contents_btn"
-    
-    
-    -if user_signed_in?
-      = link_to "ログアウトする",destroy_user_session_path,method: :delete,class: "btn loginPage_contents_btn"
-    -else
-      = link_to "新規会員登録", new_user_registration_path, class: "btn loginPage_contents_btn"
-      = link_to "ログインする", new_user_session_path, class: "btn loginPage_contents_btn"
-    
-    お問い合わせ<br> 0120-446-104
+    %li.top-navigation__bar_a
+      =link_to "ワイズとは？","https://school-wise.jp/",class:"btn loginPage_contents_btn"
+      
+    %li.top-navigation__bar_b 
+      -if user_signed_in?
+        = link_to "ログアウトする",destroy_user_session_path,method: :delete,class: "btn loginPage_contents_btn"
+      -else
+        = link_to "新規会員登録", new_user_registration_path, class: "btn loginPage_contents_btn"
+        = link_to "ログインする", new_user_session_path, class: "btn loginPage_contents_btn"
+      
+      お問い合わせ<br> 0120-446-104
