@@ -3,6 +3,8 @@ window.addEventListener('DOMContentLoaded', function () {
     autoHeight: false,
     loop: true,
     keyboard: true,
+    // effect: 'coverflow',
+    // slidesPerView: 3,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
