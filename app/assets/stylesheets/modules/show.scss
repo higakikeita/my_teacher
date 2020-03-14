@@ -279,3 +279,14 @@
   background:#aaa;
   @include product-buy;
 }
+.btn--gray {
+  display: block;
+  line-height: 48px;
+  font-size: 14px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  margin: 24px auto 0px;
+  color: white;
+  background-color:#AAAAAA;
+}
