@@ -1,6 +1,28 @@
+=render "teachersheader"
 .main-section
+  #navArea
   
-  =render "teachersheader"
+    %nav-a
+      .inner
+        %ul
+        
+        %li
+          =link_to "TOPへ戻る",root_path
+        %li
+          %a{:href => "#index2"} 学年別選択
+        %li
+          %a{:href => "#index3"} 科目別選択
+        %li
+          %a{:href => "#"} 無料サポート
+        %li
+          %a{:href => "#"} 家庭教師ワイズについて
+    .toggle_btn
+      %span
+      %span
+      %span
+      %span
+    #mask
+  
   %header.masthead.text-white.text-center
     .overlay
       .container
