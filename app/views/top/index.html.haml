@@ -22,28 +22,10 @@
     %header.masthead.text-white.text-center
       .overlay
         .container
-        .swiper-container
-          -# slide wrapper
-          .swiper-wrapper
-            -# slides
-            .swiper-slide
-              = image_tag 'photo_2.jpg', alt: 'swipe01',id:"swiper-image"
-            .swiper-slide
-              = image_tag 'kotaro.jpg', alt: 'swipe02',id:"swiper-image"
-            .swiper-slide
-              = image_tag 'kotaro.jpg', alt: 'swipe03',id:"swiper-image"
-          -# if need navigation button 
-        .swiper-button-prev
-        .swiper-button-next
-        -# if need pagination 
-        .swiper-pagination
-      .row
-        .col-xl-9.mx-auto
-          %h1.mb-5 プロ家庭教師のワイズで一緒に頑張ってみませんか?
-          入会金や退会金は一切かかりません。
-
-            
-              
+        .row
+        -# .swiper__text
+        -#   .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
+        -#   入会金や退会金は一切かかりません。
           .col-md-10.col-lg-8.col-xl-7.mx-auto
             %form
               .form-row__top
@@ -51,6 +33,59 @@
                 = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
               - else
                 = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
+        .swiper-container
+          -# slide wrapper
+          .swiper-wrapper
+            -# slides
+            .swiper-slide
+              = image_tag 'photo_2.jpg', alt: 'swipe01',id:"swiper-image"
+              .swiper__text
+                .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
+                入会金や退会金は一切かかりません。
+                .swiper__link--tag
+                -if user_signed_in?
+                  = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+                - else
+                  = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
+            .swiper-slide
+              = image_tag 'kotaro.jpg', alt: 'swipe02',id:"swiper-image"
+              .swiper__text
+                .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
+                入会金や退会金は一切かかりません。
+                .swiper__link--tag
+                -if user_signed_in?
+                  = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+                - else
+                  = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
+            .swiper-slide
+              = image_tag 'kotaro.jpg', alt: 'swipe03',id:"swiper-image"
+              .swiper__text
+                .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
+                入会金や退会金は一切かかりません。
+                .swiper__link--tag
+                -if user_signed_in?
+                  = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+                - else
+                  = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
+          -# if need navigation button 
+        .swiper-button-prev
+        .swiper-button-next
+        -# if need pagination 
+        .swiper-pagination
+      -# .row
+      -#   .col-xl-9.mx-auto
+      -#     %h1.mb-5 プロ家庭教師のワイズで一緒に頑張ってみませんか?
+      -#     入会金や退会金は一切かかりません。
+
+            
+              
+      -#     .col-md-10.col-lg-8.col-xl-7.mx-auto
+      -#       %form
+      -#         .form-row__top
+      -#         -if user_signed_in?
+      -#           = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+      -#         - else
+      -#           = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
                 -# .col-12.col-md-9.mb-2.mb-md-0
                 -#   %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
                 -# .col-12.col-md-3
