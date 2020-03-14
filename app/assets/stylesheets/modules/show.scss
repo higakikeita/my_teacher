@@ -1,9 +1,15 @@
 @import "mixins";
+.product-details__page{
+  width:100%;
+  background-color: #EEEEEE;
+  padding-top: 30px;
+  padding-bottom:30px;
+}
 .product-details__page__main{
   width: 700px;
   padding: 24px 40px 40px;
   background-color: $White;
-  margin: 40px auto 0;
+  margin: 0 auto;
   .product-name{
     font-size: 24px;
     text-align:center;
@@ -242,7 +248,7 @@
   width: 45%;
   text-align: center;
   text-decoration: none;
-  margin: 24px auto 0px;
+  margin: 0px auto 0px;
   color: white;
   background-color:#AAAAAA;
 }
