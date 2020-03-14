@@ -1,6 +1,6 @@
-
+=render "teachersheader"
 .exhibit__page
-  =render "teachersheader"
+  
   .exhibit__page__main
     .exhibit__page__main__contents
       %h3.exhibit__page__main__contents__message
@@ -87,6 +87,6 @@
         .submit-button
           .actions
             =f.submit "変更する",class:"btn--red"
-        %a.btn--gray
-          =link_to "キャンセル", :back,class: "btn--gray"
+        .btn--gray
+          =link_to "キャンセル", :back,class: "btn--gray-a"
 =render "teachersfooter"
