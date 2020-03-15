@@ -16,42 +16,47 @@
 }
 .main-content {
   width: 700px;
-  height: 1211.840px;
-  margin: 0;
+  height: 100%;
+  margin: 0 auto;
   padding: 0;
   
   .user {
-    width: 660px;
+    width: 700px;
     height: 160px;
     padding: 20px;
     position: relative;
     text-align: center;
-    background-image: image-url("bg-masthead.jpg");
-  
-  .userInfo {
-    &_img {
-      width: 170px;
-      height: 170px;
-      margin: 0 auto;
-      border-radius: 50%;
-      overflow: hidden;
-      &>img {
-        width: 100%;
+    
+    .user_background{
+      background-image: image-url("bg-masthead.jpg");
+      width: 700px;
+    .userInfo {
+      
+      &_img {
+        width: 170px;
+        height: 170px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        &>img {
+          width: 100%;
+        }
+      }
+
+      &_name {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 30px;
+      }
+
+      &_selfIntroduction {
+        margin-top: 30px;
       }
     }
-
-    &_name {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 30px;
-    }
-
-    &_selfIntroduction {
-      margin-top: 30px;
-    }
+  }
   .transaction-hisory {
     width: 700px;
-    height: 382px;
+    height: 100%;
     margin: 40px 0 0 0;
     background-color: $White;
     .header {
@@ -66,7 +71,7 @@
     }
     .transaction-tabs {
       width: 700px;
-      height: 74px;
+      height: 100px;
       list-style: none;
       overflow: hidden;
     }
@@ -85,7 +90,7 @@
   
     .tab-content-transaction {
       width: 700px;
-      height: 236px;
+      height: 100%;
       position: relative;
     }
       
@@ -108,11 +113,7 @@
       padding: 16px;
       display: block;
       position: relative;
-      &__logo {
-        width: 48px;
-        height: 48px;
-        position: absolute;
-      }
+      
       &__body {
         margin: 0 40px 0 68px;
         width: 560px;
@@ -137,7 +138,8 @@
         position: 45.703 16 31.719 675.406px;
       }
     }
+    .hide {display: none;}
 }
 }
 }
-}
+

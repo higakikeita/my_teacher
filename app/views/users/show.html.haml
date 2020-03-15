@@ -1,9 +1,10 @@
+=render "top/headcontainer"
 .mypage_a  
   %main.mypage-contents.clearfix
     .main-content
       %section.user
         .user-link
-          %figure
+          %figure.user_background
             .userInfo_img
               = image_tag @user.img_name.url(:thumb)
 
@@ -11,7 +12,7 @@
             = @user.name
           .user-link__number
             .transaction-hisory
-              %h2.header 購入した商品
+              %h2.header 今まで探した先生一覧
               %ul.transaction-tabs
                 %li.select
                   いいねした先生一覧
@@ -19,14 +20,14 @@
                   お気に入り登録の先生一覧
               .tab-content-transaction
                 %ul.tab-content-transaction__now
-                  %li.tab-content-transaction__notfound 取引中の商品がありません
+                  %li.tab-content-transaction__notfound 登録している先生はいません
                 %ul.tab-content-transaction__old.hide
                   %li.transaction-item__link
-                    .transaction-item__link__logo
                       
                     .transaction-item__link__body
-                      .transaction-item-link__body__text レース スカート  新品  RETRO GIRL M」 を購入しました。
+                      .transaction-item-link__body__text 檜垣先生を登録しました
                       %i.icon-arrow-right
                   %li.mypage-go-list
                     =link_to "#", class: "go" do
-                      一覧を見る   
+                      一覧を見る
+=render "teachers/teachersfooter"   
