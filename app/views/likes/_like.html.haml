@@ -1,6 +1,6 @@
 - if current_user.already_liked?(@teacher)
-  = button_to teacher_like_path(@teacher), class:'product-button-like', method: :delete, remote: true do
+  = button_to teacher_like_path(@teacher), class:'product-button-like',id:"likes_buttons_", method: :delete, remote: true do
     %i.fa.fa-heart.vertical-like__red-icon  いいねを取り消す
 - else
-  = button_to teacher_likes_path(@teacher), class:'product-button-like', method: :post, remote: true do
+  = button_to teacher_likes_path(@teacher), class:'product-button-like',id:"likes_buttons_ ",method: :post, remote: true do
     %i.fa.fa-heart.vertical-like__red-icon いいね！

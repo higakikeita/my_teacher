@@ -1,6 +1,10 @@
 class LikesController < ApplicationController
   def create
     @like = current_user.likes.create(teacher_id: params[:teacher_id])
+    
+    if @like.save
+      respond_to :js
+    end
     redirect_back(fallback_location: root_path)
   end
   def destroy
