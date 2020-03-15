@@ -37,3 +37,6 @@
 
 
     お問い合わせ<br> 0120-446-104
+  .header__contents__below__personal__mypage
+    %span.fas.fa-user-circle.login__icon
+    =link_to "マイページ", user_path(current_user.id),class:"mypage"

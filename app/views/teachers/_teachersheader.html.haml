@@ -4,27 +4,8 @@
 
     .more-information
     お問い合わせ<br> 0120-446-104
-    -# #navArea
-  
-    -#   %nav-a
-    -#     .inner
-    -#       %ul
-          
-    -#       %li
-    -#         =link_to "TOPへ戻る",root_path
-    -#       %li
-    -#         %a{:href => "#index2"} 学年別選択
-    -#       %li
-    -#         %a{:href => "#index3"} 科目別選択
-    -#       %li
-    -#         %a{:href => "#"} 無料サポート
-    -#       %li
-    -#         %a{:href => "#"} 無料サポート 
-    -#   .toggle_btn
-    -#     %span
-    -#     %span
-    -#     %span
-        
-    -#   #mask
+    .header__contents__below__personal__mypage
+      %span.fas.fa-user-circle.login__icon
+      =link_to "マイページ", user_path(current_user.id),class:"mypage"
       
 
