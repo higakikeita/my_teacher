@@ -1,4 +1,4 @@
 $('#like-icon-post-<%= @teacher.id.to_s %>').
   html('<%= link_to "いいね", teacher_like_path(@teacher.id, @like), method: :DELETE, remote: true, class: "loved hide-text" %>');
 $('#like-text-post-<%= @teacher.id.to_s %>').
-  html('<%= j render "teachers/like_text", { likes: @teacher.likes } %>');
+  html('<%= j render "likes/like", { likes: @teacher.likes } %>');

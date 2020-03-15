@@ -1,6 +1,18 @@
-- if current_user.already_liked?(@teacher)
-  = button_to teacher_like_path(@teacher), class:'product-button-like',id:"likes_buttons_", method: :delete, remote: true do
-    %i.fa.fa-heart.vertical-like__red-icon  いいねを取り消す
-- else
-  = button_to teacher_likes_path(@teacher), class:'product-button-like',id:"likes_buttons_ ",method: :post, remote: true do
-    %i.fa.fa-heart.vertical-like__red-icon いいね！
+%strong
+  - likes.each.with_index do |like, index|
+    - if likes.size == 1
+      = like.user.name
+      が「いいね！」しました
+    - elsif like == likes.last
+      and
+      %strong
+        = + like.user.name
+      が「いいね！」しました
+    - elsif index > 1
+      = "and " + (likes.size-index).to_s + " 他 "
+      が「いいね！」しました
+      - break
+    - elsif index == likes.size-2 || index == 1
+      = like.user.name
+    - else
+      = like.user.name + ", "
