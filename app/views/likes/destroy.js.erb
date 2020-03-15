@@ -1,1 +1,4 @@
-$('#likes_buttons_'<%= @teacher.id %>').html("<%= (render partial: 'likes/like', locals: {post: @teacher}) %>";
+$('#like-icon-post-<%= @teacher.id.to_s %>').
+  html('<%= link_to "いいねを取り消す", teacher_likes_path(@teacher), method: :POST, remote: true, class: "love hide-text" %>');
+$('#like-text-post-<%= @teacher.id.to_s %>').
+  html('<%= j render "likes/like", { likes: @teacher.likes } %>');

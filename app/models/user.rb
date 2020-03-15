@@ -4,8 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :teachers
-  has_many :likes, dependent: :destroy
-  has_many :liked_teachers, through: :likes, source: :teacher
+  has_many :likes
   mount_uploader :img_name, ImageUploader
   def already_liked?(teacher)
     self.likes.exists?(teacher_id: teacher.id)
