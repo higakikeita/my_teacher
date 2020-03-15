@@ -17,6 +17,8 @@ has_many :images, dependent: :destroy
 belongs_to :user
 accepts_nested_attributes_for :images, allow_destroy: true
 belongs_to :category
+has_many :likes
+has_many :liked_users, through: :likes, source: :user
 scope :category, ->(category_id) {where(category_id: category_id).order(created_at: "DESC").limit(10)}
 scope :subject, ->(subject) {where(subject: subject).order(created_at: "DESC").limit(10)}
 end
