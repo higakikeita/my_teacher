@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'search_child', defaults: { format: 'json' }
       get 'search_grandchild', defaults: { format: 'json' }
     end
+    resources :likes, only: [:create, :destroy]
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show
