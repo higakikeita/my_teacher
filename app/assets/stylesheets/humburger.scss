@@ -159,13 +159,13 @@ nav-a .inner ul li a:hover {
 .toggle_btn span:nth-child(3) {
   top: 25px;
   width: 60px;
-  animation: equalizer01 5000ms infinite;
-}
-.toggle_btn span:nth-child(4) {
-  top: 35px;
-  width: 40px;
   animation: equalizer02 5000ms infinite;
 }
+// .toggle_btn span:nth-child(4) {
+//   top: 35px;
+//   width: 40px;
+//   animation: equalizer02 5000ms infinite;
+// }
 .open .toggle_btn span {
   background-color: #fff;
   width: 30px;
