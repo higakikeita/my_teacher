@@ -48,12 +48,14 @@
             %tr
               %th 講師担当地域
               %td=@teacher.prefecture
-            
+        .product-details-page-bottom.clearfix
+          .product-button-left
+          =render partial: 'likes/like', locals: @teachers
         .product-details-page__price
           %span.product-price.bold
             -# = number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
-          %span.product-tax          (税込)
-          %span.product-shipping-fee 送料込み
+          %span.product-tax          
+          %span.product-shipping-fee 
         .product-buy__btn__box
           - if user_signed_in? && current_user.id ==@teacher.user_id
             = link_to "削除する", teacher_path(@teacher.id), method: :delete,class:"product-details-delete__btn"
