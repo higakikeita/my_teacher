@@ -161,11 +161,7 @@ nav-a .inner ul li a:hover {
   width: 60px;
   animation: equalizer02 5000ms infinite;
 }
-// .toggle_btn span:nth-child(4) {
-//   top: 35px;
-//   width: 40px;
-//   animation: equalizer02 5000ms infinite;
-// }
+
 .open .toggle_btn span {
   background-color: #fff;
   width: 30px;
@@ -182,10 +178,7 @@ nav-a .inner ul li a:hover {
   transform: translate(0, -10px) rotate(45deg);
   animation: unset;
 }
-// .open .toggle_btn span:nth-child(4) {
-//   transform: translate(0, -10px) rotate(45deg);
-//   animation: unset;
-// }
+
 @media screen and (max-width: 767px) {
   .open .toggle_btn {
     left: 260px;
