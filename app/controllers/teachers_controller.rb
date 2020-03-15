@@ -32,7 +32,7 @@ before_action :set_teacher, only: [:show,:edit,:update]
     end
   end
   def show
-    
+    @like=Like.new
   end
   def destroy
     teacher =Teacher.find(params[:id])
