@@ -169,18 +169,38 @@
               %p.font-weight-light.mb-0 "Thanks so much for making these free resources available to us!"
     / Call to Action
     %section.call-to-action.text-white.text-center
-      .overlay
+      .overlay-a WISE-TV
       .container
         .row
-          .col-xl-9.mx-auto
-            %h2.mb-4 Ready to get started? Sign up now!
+        
           .col-md-10.col-lg-8.col-xl-7.mx-auto
             %form
-              .form-row
-                .col-12.col-md-9.mb-2.mb-md-0
-                  %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
-                .col-12.col-md-3
-                  %button.btn.btn-block.btn-lg.btn-primary{:type => "submit"} Sign up!
+              .form-row__top
+              
+        .swiper-container2
+          -# slide wrapper
+          .swiper-wrapper2
+            -# slides
+            .swiper-slide2
+              = image_tag 'photo_2.jpg', alt: 'swipe01',id:"swiper-image2"
+              %div{"data-swiper-parallax" => "-300"} Slide 1
+
+              .swiper__text2
+                .swiper__text--large2 プロ家庭教師のワイズで一緒に頑張ってみませんか?
+                入会金や退会金は一切かかりません。
+                .swiper__link--tag2
+      -# .overlay
+      -# .container
+      -#   .row
+      -#     .col-xl-9.mx-auto
+      -#       %h2.mb-4 Ready to get started? Sign up now!
+      -#     .col-md-10.col-lg-8.col-xl-7.mx-auto
+      -#       %form
+      -#         .form-row
+      -#           .col-12.col-md-9.mb-2.mb-md-0
+      -#             %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
+      -#           .col-12.col-md-3
+      -#             %button.btn.btn-block.btn-lg.btn-primary{:type => "submit"} Sign up!
     / Footer
     %footer.footer.bg-light
       .container
