@@ -41,7 +41,22 @@
       .swiper-button-next
       -# if need pagination 
         .swiper-pagination
-  
+  .pickup-section
+    .pickup-section__header
+      .pickup-section__header--title
+        みんながいいねしてる先生
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+      %ul.pickup-section__main--products
+        - @all_ranks.each do |teacher|
+          =render "teacherlike",teacher:teacher
+        -# =teacher.name
+        -# .product__thumbnail--image
+        -# - if teacher.images.present?
+        -#   =image_tag (teacher.images[0].teacher_image.url)
+        -# - else
+        -#   = image_tag "no_image.png"
   .pickup-section
     .pickup-section__header
       #index2
@@ -251,11 +266,3 @@
 
 =render "teachersfooter"
 
-- @all_ranks.each do |teacher|
-
-  =teacher.name
-  .product__thumbnail--image
-  - if teacher.images.present?
-    =image_tag (teacher.images[0].teacher_image.url)
-  - else
-    = image_tag "no_image.png"
