@@ -251,5 +251,11 @@
 
 =render "teachersfooter"
 
+- @all_ranks.each do |teacher|
 
-
+  =teacher.name
+  .product__thumbnail--image
+  - if teacher.images.present?
+    =image_tag (teacher.images[0].teacher_image.url)
+  - else
+    = image_tag "no_image.png"
