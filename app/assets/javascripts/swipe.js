@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper1 = new Swiper('.swiper-container', {
     autoHeight: false,
     loop: true,
     keyboard: true,
@@ -20,16 +20,5 @@ window.addEventListener('DOMContentLoaded', function () {
       clickable: true
     }
   });
-  var mySwiper = new Swiper('.swiper-container', {
-    parallax: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+
 }, false);

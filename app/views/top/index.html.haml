@@ -33,7 +33,7 @@
                 = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
               - else
                 = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
-        .swiper-container
+        .swiper-container.swiper1
           -# slide wrapper
           .swiper-wrapper
             -# slides
@@ -68,10 +68,10 @@
                 - else
                   = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
           -# if need navigation button 
-        .swiper-button-prev
-        .swiper-button-next
+        .swiper-button-prev.prev1
+        .swiper-button-next.next1
         -# if need pagination 
-        .swiper-pagination
+        .swiper-pagination.page1
       -# .row
       -#   .col-xl-9.mx-auto
       -#     %h1.mb-5 プロ家庭教師のワイズで一緒に頑張ってみませんか?
@@ -177,18 +177,21 @@
             %form
               .form-row__top
               
-        .swiper-container2
+        .swiper-container.swiper2
           -# slide wrapper
-          .swiper-wrapper2
+          .swiper-wrapper
             -# slides
-            .swiper-slide2
-              = image_tag 'photo_2.jpg', alt: 'swipe01',id:"swiper-image2"
-              %div{"data-swiper-parallax" => "-300"} Slide 1
-
-              .swiper__text2
-                .swiper__text--large2 プロ家庭教師のワイズで一緒に頑張ってみませんか?
+            .swiper-slide
+              = image_tag 'photo_2.jpg', alt: 'swipe04',id:"swiper-image2"
+              
+              .swiper__text
+                .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
                 入会金や退会金は一切かかりません。
-                .swiper__link--tag2
+              .swiper__link--tag
+            .swiper-button-prev.prev2
+            .swiper-button-next.next2
+            -# if need pagination 
+            .swiper-pagination.page2
       -# .overlay
       -# .container
       -#   .row
