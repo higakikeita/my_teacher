@@ -1,6 +1,11 @@
 %nav.navbar.navbar-light.bg-light.static-top
   %li.container{href: "https://school-wise.jp/"} 
     %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "20%"}/
+    %form.search_container{:action => "#", :method => "get"}
+      %input{:placeholder => "キーワード検索", :size => "25", :type => "text"}/
+      %input{:type => "submit", :value => ""}/
+
+
 
     .more-information
     お問い合わせ<br> 0120-446-104
