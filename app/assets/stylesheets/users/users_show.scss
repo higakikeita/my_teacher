@@ -26,33 +26,33 @@
     padding: 20px;
     position: relative;
     text-align: center;
-    
+   
     .user_background{
       background-image: image-url("bg-masthead.jpg");
       width: 700px;
-    .userInfo {
-      
-      &_img {
-        width: 170px;
-        height: 170px;
-        margin: 0 auto;
-        border-radius: 50%;
-        overflow: hidden;
-        &>img {
-          width: 100%;
+      .userInfo {
+        
+        &_img {
+          width: 170px;
+          height: 170px;
+          margin: 0 auto;
+          border-radius: 50%;
+          overflow: hidden;
+          &>img {
+            width: 100%;
+          }
+        }
+
+        &_name {
+          text-align: center;
+          margin-top: 30px;
+          font-size: 30px;
+        }
+
+        &_selfIntroduction {
+          margin-top: 30px;
         }
       }
-
-      &_name {
-        text-align: center;
-        margin-top: 30px;
-        font-size: 30px;
-      }
-
-      &_selfIntroduction {
-        margin-top: 30px;
-      }
-    }
   }
   .transaction-hisory {
     width: 700px;
