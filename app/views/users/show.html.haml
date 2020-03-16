@@ -6,8 +6,10 @@
         .user-link
           %figure.user_background
             .userInfo_img
+            - if @user.img_name.present?
               = image_tag @user.img_name.url(:thumb)
-
+            - else
+            = image_tag "kotaro.jpg"
           %h2.user-link__name
             = @user.name
           .user-link__number
