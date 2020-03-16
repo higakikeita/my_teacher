@@ -1,12 +1,12 @@
 %nav.navbar.navbar-light.bg-light.static-top
-  .container{href: "https://school-wise.jp/"} 
+  %li.container{href: "https://school-wise.jp/"} 
     %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "20%"}/
 
     .more-information
     お問い合わせ<br> 0120-446-104
-    .header__contents__below__personal__mypage
-      %span.fas.fa-user-circle.login__icon
-    -if user_signed_in?
-      =link_to "マイページ", user_path(current_user.id),class:"mypage"
+  .header__contents__below__personal__mypage
+    %span.fas.fa-user-circle.login__icon
+  -if user_signed_in?
+    =link_to "マイページ", user_path(current_user.id),class:"mypage"
       
 

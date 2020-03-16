@@ -9,6 +9,8 @@
         %li
           =link_to "TOPへ戻る",root_path
         %li
+          %a{:href => "#index1"} みんながいいねした先生
+        %li
           %a{:href => "#index2"} 学年別選択
         %li
           %a{:href => "#index3"} 科目別選択
@@ -43,6 +45,7 @@
         .swiper-pagination
   .pickup-section
     .pickup-section__header
+      #index1
       .pickup-section__header--title
         みんながいいねしてる先生
     .pickup-section__main
@@ -51,12 +54,7 @@
       %ul.pickup-section__main--products
         - @all_ranks.each do |teacher|
           =render "teacherlike",teacher:teacher
-        -# =teacher.name
-        -# .product__thumbnail--image
-        -# - if teacher.images.present?
-        -#   =image_tag (teacher.images[0].teacher_image.url)
-        -# - else
-        -#   = image_tag "no_image.png"
+        
   .pickup-section
     .pickup-section__header
       #index2

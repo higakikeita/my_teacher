@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show
+  get "users/:id/likes" => "users#likes"
 end
