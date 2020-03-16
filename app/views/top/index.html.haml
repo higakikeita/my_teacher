@@ -176,34 +176,12 @@
           .col-md-10.col-lg-8.col-xl-7.mx-auto
             %form
               .form-row__top
-              
-        .swiper-container.swiper2
-          -# slide wrapper
-          .swiper-wrapper
-            -# slides
-            .swiper-slide
-              = image_tag 'photo_2.jpg', alt: 'swipe04',id:"swiper-image2"
-              
-              .swiper__text
-                .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
-                入会金や退会金は一切かかりません。
-              .swiper__link--tag
-            .swiper-button-prev.prev2
-            .swiper-button-next.next2
-            -# if need pagination 
-            .swiper-pagination.page2
-      -# .overlay
-      -# .container
-      -#   .row
-      -#     .col-xl-9.mx-auto
-      -#       %h2.mb-4 Ready to get started? Sign up now!
-      -#     .col-md-10.col-lg-8.col-xl-7.mx-auto
-      -#       %form
-      -#         .form-row
-      -#           .col-12.col-md-9.mb-2.mb-md-0
-      -#             %input.form-control.form-control-lg{:placeholder => "Enter your email...", :type => "email"}/
-      -#           .col-12.col-md-3
-      -#             %button.btn.btn-block.btn-lg.btn-primary{:type => "submit"} Sign up!
+            .youtube-container
+              %iframe#player{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/vZLttzhLIPU", :width => "560"}
+            .youtube-container-text
+              無料講座放映中
+              -# %iframe#player{frameborder: "0", height:"390", src: "https://www.youtube.com/embed/6XDjA9d_05M", type: "text/html", width: "640"}
+        
     / Footer
     %footer.footer.bg-light
       .container
