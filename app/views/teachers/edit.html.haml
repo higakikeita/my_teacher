@@ -29,46 +29,46 @@
                   %p ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
                   = f.fields_for :images do |i|
                     = i.file_field :teacher_image,id:"sell-img"
-        .sell--content
-          .sell--content__name
-            %h3.sell--content__name__name
+        .teacher--content
+          .teacher--content__name
+            %h3.teacher--content__name__name
               講師名
               %span.form--caution 
                 必須
             %div
-              = f.text_field :name, class:"product-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
-          .sell--content__description
-            %h3.sell--content__description__description
+              = f.text_field :name, class:"teacher-name__text__field",placeholder: "講師登録名（必須 40文字まで)"
+          .teacher--content__description
+            %h3.teacher--content__description__description
               自身のアピールポイント
               %span.form--caution 
                 必須
-            =f.text_area :explain,class:"sell--content__text__area",placeholder: "自己アピールしてください（必須 1,000文字以内）（例）大学受験の数学指導に自身があります。"
-        .product-details
-          %h3.product-details__name 講師の詳細
-          .product-details__form
-            .product-details__form__category
-              %h3.product-details__form__category__name
+            =f.text_area :explain,class:"teacher--content__text__area",placeholder: "自己アピールしてください（必須 1,000文字以内）（例）大学受験の数学指導に自身があります。"
+        .teacher-details
+          %h7.teacher-details__name 講師の詳細
+          .teacher-details__form
+            .teacher-details__form__category
+              %h7.teacher-details__form__category__name
                 コース選択
                 %span.form--caution 必須
                 .select--wrap
                   = f.collection_select :category_id, Category.all.limit(13), :id, :name,{prompt:"---"},{class:"select--wrap-cat1__default-category1"}
                   %i.fas.fa-angle-down
-            .product-details__form__brand
-              %h3.product-details__form__brand__name
+            .teacher-details__form__brand
+              %h7.teacher-details__form__brand__name
                 大学名
                 %span.form--caution 任意
                 .select--wrap
                   = f.select :university,Teacher.universities.keys,{prompt:"---"}, {class:"select--wrap__default"}
                   %i.fas.fa-angle-down
-            .product-details__form__size
-              %h3.product-details__form__size__name
+            .teacher-details__form__size
+              %h7.product-details__form__size__name
                 性別
                 %span.form--caution 必須
                 .select--wrap
                   = f.select :sex,Teacher.sexes.keys,{prompt:"---"}, {class:"select--wrap__default"}
                   %i.fas.fa-angle-down
-            .product-details__form__status
-              %h3.product-details__form__status__name
+            .teacher-details__form__status
+              %h7.teacher-details__form__status__name
                 指導可能科目
                 %span.form--caution 必須
                 .select--wrap

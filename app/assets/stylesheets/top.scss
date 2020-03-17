@@ -1,10 +1,7 @@
 header.masthead {
   position: relative;
   background-color: $gray-800;
-  // background-image: image-url("photo_2.jpg") 
-  //  ;
-  // background-repeat: no-repeat;
-  // background-position: center;
+  
   @include background-cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
