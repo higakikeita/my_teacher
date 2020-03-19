@@ -12,7 +12,7 @@ before_action :set_teacher, only: [:show,:edit,:update]
     @english = Teacher.subject(5)
     @japanese = Teacher.subject(9)
     @mathematic = Teacher.subject(8)
-    @all_ranks = Teacher.find(Like.group(:teacher_id).order('count(teacher_id) desc').limit(3).pluck(:teacher_id))
+    @all_ranks = Teacher.find(Like.group(:teacher_id).order('count(teacher_id) desc').limit(5).pluck(:teacher_id))
   end
 
   def new

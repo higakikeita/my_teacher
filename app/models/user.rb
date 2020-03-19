@@ -3,10 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :teachers
-  has_many :likes
+  has_many :teachers, dependent: :destroy
+  has_many :likes,dependent: :destroy
   has_many :clips, dependent: :destroy
   has_many :teachers, through: :clips
+  has_many :teachers, through: :likes
   mount_uploader :img_name, ImageUploader
   def already_liked?(teacher)
     self.likes.exists?(teacher_id: teacher.id)

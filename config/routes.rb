@@ -11,11 +11,12 @@ Rails.application.routes.draw do
     member do
       post "add", to: "clips#create"
       get "show_clips" => "clips#show_clips"
+      post "add", to: "likes#create"
     end
     resources :likes, only: [:create, :destroy]
     resources :clips, only: [:destroy,:index]
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show
-  get "users/:id/likes" => "users#likes"
+  
 end

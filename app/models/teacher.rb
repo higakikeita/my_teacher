@@ -20,10 +20,12 @@ belongs_to :category
 has_many :likes, -> { order(created_at: :desc) }, dependent: :destroy
 has_many :clips
 has_many :users, through: :clips
+has_many :users, through: :likes
 def liked_by(current_user)
   # user_idが一致するlikeを検索する
   Like.find_by(user_id: current_user.id)
 end
+
 scope :category, ->(category_id) {where(category_id: category_id).order(created_at: "DESC").limit(10)}
 scope :subject, ->(subject) {where(subject: subject).order(created_at: "DESC").limit(10)}
 end
