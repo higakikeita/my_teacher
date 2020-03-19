@@ -1,0 +1,3 @@
+class Clip < ApplicationRecord
+  
+end
