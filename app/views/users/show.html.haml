@@ -20,10 +20,11 @@
               %ul.transaction-tabs
                 %li.select
                   いいねした先生一覧
-                  
-
+                
                 %li
                   お気に入り登録の先生一覧
+                  -@user.clips.each do |clip|
+                    =clip.teacher.name
               .tab-content-transaction
                 %ul.tab-content-transaction__now
                   %li.tab-content-transaction__notfound 登録している先生はいません
@@ -31,7 +32,9 @@
                   %li.transaction-item__link
                       
                     .transaction-item__link__body
-                      .transaction-item-link__body__text 檜垣先生を登録しました
+                      .transaction-item-link__body__text
+                      -@user.clips.each do |clip|
+                        =clip.teacher.name
                       %i.icon-arrow-right
                   %li.mypage-go-list
                     =link_to "#", class: "go" do
