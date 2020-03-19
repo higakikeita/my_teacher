@@ -9,7 +9,7 @@ class ClipsController < ApplicationController
     @clip = Clip.new(teacher_id: @teacher_id, user_id: @user_id)
   
     if @clip.save
-      redirect_to user_path(current_user)
+      redirect_to teacher_clips_path(current_user)
     end
   end
   def destroy
@@ -17,5 +17,10 @@ class ClipsController < ApplicationController
     if @clip.destroy
       redirect_to user_path(current_user)
     end
+  end
+  def show_clips
+    @teacher = Teacher.find(params[:id])
+    @clips = Clip.where(teacher_id: @teacher.id).all
+    
   end
 end
