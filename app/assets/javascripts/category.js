@@ -17,7 +17,7 @@ $(function () {
                          <i class="fas fa-angle-down"></i>
                        </div>
                       `;
-    $('.product-details__form__category').append(childSelectHtml);
+    $('.teacher-details__form__category').append(childSelectHtml);
   }
   console.log(this)
   // 孫カテゴリーの表示作成
@@ -32,7 +32,7 @@ $(function () {
                               <i class="fas fa-angle-down"></i>
                             </div>
                            `;
-    $('.product-details__form__category').append(grandchildSelectHtml);
+    $('.teacher-details__form__category').append(grandchildSelectHtml);
   }
   console.log(this)
   // 子要素のアクション
@@ -70,7 +70,7 @@ $(function () {
   });
 
   // 孫要素のアクション
-  $(".product-details__form__category").on("change", "#child_form", function () {
+  $(".teacher-details__form__category").on("change", "#child_form", function () {
     var childValue = $('#child_form option:selected').data('category');
     if (childValue != "---") {
       $.ajax({
