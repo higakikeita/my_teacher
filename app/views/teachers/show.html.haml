@@ -58,19 +58,18 @@
         %div{:id => "like-text-post-#{@teacher.id.to_s}"}
           = render "likes/like", { likes: @teacher.likes }
         %div
-          = link_to "このイベントをクリップ", add_teacher_path(@teacher), method: :post,class:"clip-icon-post"
+          = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
+          
+              
+          
 
-        .product-details-page__price
-          %span.product-price.bold
-            -# = number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
-          %span.product-tax          
-          %span.product-shipping-fee 
-        .product-buy__btn__box
-          - if user_signed_in? && current_user.id ==@teacher.user_id
-            = link_to "削除する", teacher_path(@teacher.id), method: :delete,class:"product-details-delete__btn"
+        
+      .product-buy__btn__box
+        - if user_signed_in? && current_user.id ==@teacher.user_id
+          = link_to "削除する", teacher_path(@teacher.id), method: :delete,class:"product-details-delete__btn"
 
-            = link_to "編集する", edit_teacher_path(@teacher.id),class:"product-details-edit__btn" 
-          - else
-          = link_to "講師一覧ページへ",teachers_path,class:"product-details-edit__btn"
+          = link_to "編集する", edit_teacher_path(@teacher.id),class:"product-details-edit__btn" 
+        - else
+        = link_to "講師一覧ページへ",teachers_path,class:"product-details-edit__btn"
 =render "teachersfooter"
             

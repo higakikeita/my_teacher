@@ -1,3 +1,39 @@
-// Place all the styles related to the clips controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* ここから下がボタンのCSS　*/
+.bnt-massage-c {
+  display: inline-block;
+  min-width: 130px;
+  text-align: center;
+  background-color: #000;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px 10px 16px;
+  position: relative;
+  transition: .9s;
+  border: 1px solid #FFF;
+  border-radius: 70px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bnt-massage-c:before {
+  
+  
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+
+
+.bnt-massage-c:hover  {
+  border-radius: 8px 0 0;
+  border-radius: 100px;
+}
+
+
