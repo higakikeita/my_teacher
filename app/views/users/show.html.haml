@@ -35,6 +35,9 @@
                       .transaction-item-link__body__text
                       -@user.clips.each do |clip|
                         =clip.teacher.name
+                        .product__thumbnail
+                          .product__thumbnail--image
+                        =image_tag(clip.teacher.images[0].teacher_image.url)
                       %i.icon-arrow-right
                   %li.mypage-go-list
                     =link_to "#", class: "go" do
