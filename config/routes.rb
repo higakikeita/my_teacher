@@ -10,9 +10,10 @@ Rails.application.routes.draw do
     end
     member do
       post "add", to: "clips#create"
+      get "show_clips" => "clips#show_clips"
     end
     resources :likes, only: [:create, :destroy]
-    resources :clips, only: [:destroy]
+    resources :clips, only: [:destroy,:index]
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show

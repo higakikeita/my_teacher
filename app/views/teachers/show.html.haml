@@ -58,7 +58,7 @@
         %div{:id => "like-text-post-#{@teacher.id.to_s}"}
           = render "likes/like", { likes: @teacher.likes }
         %div
-          = link_to "このイベントをクリップ", add_teacher_path(@teacher), method: :post
+          = link_to "このイベントをクリップ", add_teacher_path(@teacher), method: :post,class:"clip-icon-post"
 
         .product-details-page__price
           %span.product-price.bold
