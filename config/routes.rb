@@ -8,7 +8,12 @@ Rails.application.routes.draw do
       get 'search_child', defaults: { format: 'json' }
       get 'search_grandchild', defaults: { format: 'json' }
     end
+    member do
+      post "add", to: "clips#create"
+      get "show_clips" => "clips#show_clips"
+    end
     resources :likes, only: [:create, :destroy]
+    resources :clips, only: [:destroy,:index]
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show

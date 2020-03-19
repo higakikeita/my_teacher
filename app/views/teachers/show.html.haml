@@ -57,6 +57,9 @@
             = link_to "いいね", teacher_likes_path(@teacher), method: :POST, remote: true, class: "love hide-text"
         %div{:id => "like-text-post-#{@teacher.id.to_s}"}
           = render "likes/like", { likes: @teacher.likes }
+        %div
+          = link_to "このイベントをクリップ", add_teacher_path(@teacher), method: :post,class:"clip-icon-post"
+
         .product-details-page__price
           %span.product-price.bold
             -# = number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)

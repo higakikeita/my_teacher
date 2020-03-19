@@ -18,6 +18,8 @@ belongs_to :user
 accepts_nested_attributes_for :images, allow_destroy: true
 belongs_to :category
 has_many :likes, -> { order(created_at: :desc) }, dependent: :destroy
+has_many :clips
+has_many :users, through: :clips
 def liked_by(current_user)
   # user_idが一致するlikeを検索する
   Like.find_by(user_id: current_user.id)
