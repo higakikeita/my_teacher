@@ -1,4 +1,8 @@
 class ClipsController < ApplicationController
+  def index
+    @user = current_user
+    @clips = Clip.where(user_id: @user.id).all
+  end
   def create
     @user_id = current_user.id
     @teacher_id = Teacher.find(params[:id]).id
