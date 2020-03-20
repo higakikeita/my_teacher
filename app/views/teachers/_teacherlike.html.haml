@@ -1,12 +1,12 @@
-= link_to teacher_path(teacher.id), class: "products__list" do
-  %li.products__list
-    %figure.product
-      %figucaption.product__text
+= link_to teacher_path(teacher.id), class: "teachers__list" do
+  %li.teachers__list
+    %figure.teacher
+      %figucaption.teacher__text
         = teacher.name
-      .product__thumbnail
-        .product__thumbnail--label
+      .teacher__thumbnail
+        .teacher__thumbnail--label
          
-        .product__thumbnail--image
+        .teacher__thumbnail--image
           - if teacher.images.present?
             =image_tag (teacher.images[0].teacher_image.url)
           - else

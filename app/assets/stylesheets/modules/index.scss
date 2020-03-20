@@ -67,18 +67,18 @@
       }
     }
 
-    &--products {
+    &--teachers {
       margin: 0px auto;
       width: 1020px;
       display: flex;
       flex-wrap: wrap;
 
-      .products__list {
+      .teachers__list {
         width: 182px;
         height: 230px;
         margin: 10px;
 
-        .product {
+        .teacher {
           width: 100%;
           display: flex;
           flex-direction: column-reverse;
@@ -133,7 +133,7 @@
           }
         }
 
-        .product:hover {
+        .teacher:hover {
           margin: -1px;
           border: 1px solid rgb(0, 149, 238);
           cursor: pointer;
