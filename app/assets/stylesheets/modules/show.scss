@@ -1,16 +1,16 @@
 @import "mixins";
-.product-details__page{
+.teacher-details__page{
   width:100%;
   background-color: #EEEEEE;
   padding-top: 30px;
   padding-bottom:30px;
 }
-.product-details__page__main{
+.teacher-details__page__main{
   width: 700px;
   padding: 24px 40px 40px;
   background-color: $White;
   margin: 0 auto;
-  .product-name{
+  .teacher-name{
     font-size: 24px;
     text-align:center;
     word-wrap:break-word;
@@ -142,97 +142,61 @@
       }
     }
   }
-  .product-details-page__price {
-    clear: both;
-    margin: 24px 0 0 ;
-    text-align: center;
-    .product-price {
-      margin: 0 16px 0 0;
-      font-size: 50px;
-      font-weight: 600;
-    }
-    .product-tax {
-      font-size: 10px;
-    }
-    .product-shipping-fee {
-      display: inline-block;
-      font-size: 16px;
-    }
-  }
-  .product-details-delete__btn {
+  
+  .teacher-details-delete__btn {
     background:#aaa;
     @include product-buy;
   }
-  .product-details-edit__btn {
+  .teacher-details-edit__btn {
     background:$Red;
     @include product-buy;
   }
-  .product-details-resorve__btn {
-    background:$Blue;
-    @include product-buy;
-  }
-  .product-purchase__btn {
-    background:$Red;
-    cursor: hand;
-    @include product-buy;
-  }
-  .product-details-page-bottom{
+  
+  
+  .teacher-details-page-bottom{
     margin: 16px 0 0;
     
     @include clearfix;
-    .product-button-left{
+    .teacher-button-left{
       float: left;
       display: flex;
-      .product-button-like{
-       @include product-button; 
-      }
-      .product-button-report{
-        @include product-button;
-      }
+      
     }
-    .product-button-right{
-      margin: 8px 0 0;
-      float: right;
-      font-size: 14px;
-      vertical-align: middle;
-      display: inline-block;
-      border-radius: 40px;
-      background: #f5f5f5;
-    }
+   
   }
 }
 
-.product-detail-message{
-  padding: 24px;
-  .text_area-default{
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    min-height: 104px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: #fff;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .text_area-default_btn{
-    width: 100%;
-    margin: 8px 0 0;
-    font-size: 24px;
-    text-align: center;
-    background: #aaa;
-    border: 1px solid #aaa;
-    color: #fff;
-    height: 60px;
-  }
-  .item-comment{
-    width: calc(100% - 56px);
-    padding: 16px;
-    background: #eef0f4;
-    border-radius: 15px;
-    line-height: 1.5;
-  }
-}
+// .product-detail-message{
+//   padding: 24px;
+//   .text_area-default{
+//     display: block;
+//     width: 100%;
+//     max-width: 100%;
+//     min-height: 104px;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     background: #fff;
+//     font-size: 16px;
+//     line-height: 1.5;
+//   }
+//   .text_area-default_btn{
+//     width: 100%;
+//     margin: 8px 0 0;
+//     font-size: 24px;
+//     text-align: center;
+//     background: #aaa;
+//     border: 1px solid #aaa;
+//     color: #fff;
+//     height: 60px;
+//   }
+//   .item-comment{
+//     width: calc(100% - 56px);
+//     padding: 16px;
+//     background: #eef0f4;
+//     border-radius: 15px;
+//     line-height: 1.5;
+//   }
+// }
 
 
 .product-details-delete__btn {
