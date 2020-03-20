@@ -1,19 +1,33 @@
-
-
-%h2 お気に入りした先生
-- @clips.each do |clip|
-  - teacher = Teacher.find(clip.teacher_id)
-  -# .name3= link_to teacher.name, teacher_clips_path(teacher)
-  %li.products__list
-    %figure.product
-      %figucaption.product__text
+.teacher-details__page
+  .teacher-details__page__head
+    .teacher-details__page__main
+      - @clips.each do |clip|
+        - teacher = Teacher.find(clip.teacher_id)
         =teacher.name
-      .product__thumbnail
-        .product__thumbnail--image
-          =image_tag(teacher.images[0].teacher_image.url)
-  -# .name2= link_to "参加中のイベントから削除",teacher_clip_path(clip), method: :delete
-  -# .name2
-  -#   = event.event_date.strftime("%Y-%m-%d %H:%M:%S")
-  -# .name2
-  -#   = event.event_location
-  %br/
+        %p.product-wording
+        .teacher__thumbnail
+          .teacher__thumbnail--image
+        =image_tag(teacher.images[0].teacher_image.url)
+        
+          
+
+
+
+
+    -# %h2 お気に入りした先生
+    -# - @clips.each do |clip|
+    -#   - teacher = Teacher.find(clip.teacher_id)
+      
+    -#   %li.products__list
+    -#     %figure.product
+    -#       %figucaption.product__text
+    -#         =teacher.name
+    -#       .product__thumbnail
+    -#         .product__thumbnail--image
+    -#           =image_tag(teacher.images[0].teacher_image.url)
+    -#   -# .name2= link_to "参加中のイベントから削除",teacher_clip_path(clip), method: :delete
+    -#   -# .name2
+    -#   -#   = event.event_date.strftime("%Y-%m-%d %H:%M:%S")
+    -#   -# .name2
+    -#   -#   = event.event_location
+    -#   %br/
