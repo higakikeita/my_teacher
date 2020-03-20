@@ -15,7 +15,7 @@
         .userInfo_selfIntroduction
           = @user.self_introduction
           .user-link__number
-            .transaction-hisory
+            .user-favorite__box
               %h2.header 今まで探した先生一覧
               %ul.transaction-tabs
                 %li.select
@@ -28,16 +28,18 @@
                 %ul.tab-content-transaction__now
                   %li.tab-content-transaction__notfound 登録している先生はいません
                 %ul.tab-content-transaction__old.hide
-                  %li.transaction-item__link
-                      
-                    .transaction-item__link__body
-                      .transaction-item-link__body__text
+                  .transaction-item__link__body
+                    .transaction-item__link__body__text
+                      .pickup-section__main--teachers
                       -@user.clips.each do |clip|
+                        %li.teachers__list
+                          %figure.teacher
+                            %figucaption.teacher__text
                         =clip.teacher.name
-                        .product__thumbnail
-                          .product__thumbnail--image
+                        .teacher__thumbnail
+                          .teacher__thumbnail--image
                         =image_tag(clip.teacher.images[0].teacher_image.url)
-                      %i.icon-arrow-right
+                        %i.icon-arrow-right
                   %li.mypage-go-list
                     =link_to "#", class: "go" do
                       一覧を見る
