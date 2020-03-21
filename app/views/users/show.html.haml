@@ -30,8 +30,9 @@
                 %ul.tab-content-transaction__old.hide
                   .transaction-item__link__body
                     .transaction-item__link__body__text
-                      .pickup-section__main--teachers
-                      -@user.clips.each do |clip|
+                      
+                    -@user.clips.each do |clip|
+                      %ul.pickup-section__main--teachers
                         %li.teachers__list
                           %figure.teacher
                             %figucaption.teacher__text
