@@ -25,7 +25,10 @@ def liked_by(current_user)
   # user_idが一致するlikeを検索する
   Like.find_by(user_id: current_user.id)
 end
-
+def cliped_by(current_user)
+  # user_idが一致するlikeを検索する
+  Clip.find_by(user_id: current_user.id)
+end
 scope :category, ->(category_id) {where(category_id: category_id).order(created_at: "DESC").limit(10)}
 scope :subject, ->(subject) {where(subject: subject).order(created_at: "DESC").limit(10)}
 end

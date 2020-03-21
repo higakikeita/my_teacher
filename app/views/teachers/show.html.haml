@@ -85,7 +85,11 @@
           %div{:id => "like-text-post-#{@teacher.id.to_s}"}
             = render "likes/like", { likes: @teacher.likes }
           %div
-            = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
+            - if @teacher.cliped_by(current_user).present?
+              = link_to "登録を取り消す",teacher_clip_path(@teacher.id,@teacher.cliped_by(current_user)),method: :DELETE,remote: true
+            - else
+              = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
+            
             
                 
             

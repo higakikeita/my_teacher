@@ -14,6 +14,7 @@ class ClipsController < ApplicationController
   end
   def destroy
     @clip = Clip.find(params[:id])
+    
     if @clip.destroy
       redirect_to user_path(current_user)
     end
