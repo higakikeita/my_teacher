@@ -29,24 +29,24 @@
                   %li.tab-content-transaction__notfound 登録している先生はいません
                 %ul.tab-content-transaction__old.hide
                   .transaction-item__link__body
-                    %li.transaction-item__link__body__text
-                      .pickup-section
-                        .pickup-section__main
-                          .pickup-section__main--teachers
-                            -@user.clips.each do |clip|
-                              .teachers__list
-                                %figure.teacher
-                                  %figucaption.teacher__text
-                                    =clip.teacher.name
-                                  .teacher__thumbnail
-                                    .teacher__thumbnail--label
-                                    .teacher__thumbnail--image
-                                      =image_tag(clip.teacher.images[0].teacher_image.url)
-                                %i.icon-arrow-right
-                  .mypage-go-list
-                    
-                    =link_to "#", class: "go" do
-                      一覧を見る
+                  %li.transaction-item__link__body__text
+                    .pickup-section
+                      .pickup-section__main
+                        .pickup-section__main--teachers
+                          -@user.clips.each do |clip|
+                            .teachers__list
+                              %figure.teacher
+                                %figucaption.teacher__text
+                                  =clip.teacher.name
+                                .teacher__thumbnail
+                                  .teacher__thumbnail--label
+                                  .teacher__thumbnail--image
+                                    =image_tag(clip.teacher.images[0].teacher_image.url)
+                              %i.icon-arrow-right
+                    .mypage-go-list
+                      
+                      =link_to "#", class: "go" do
+                        一覧を見る
 
 
 =render "teachers/teachersfooter"   
