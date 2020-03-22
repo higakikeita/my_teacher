@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       post "add", to: "likes#create"
     end
     resources :likes, only: [:create, :destroy]
-    resources :clips, only: [:destroy,:index]
+    resources :clips, only: [:destroy,:index,:create]
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show

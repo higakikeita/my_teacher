@@ -7,16 +7,18 @@ class ClipsController < ApplicationController
     @user_id = current_user.id
     @teacher_id = Teacher.find(params[:id]).id
     @clip = Clip.new(teacher_id: @teacher_id, user_id: @user_id)
-  
+    @teacher =@clip.teacher
     if @clip.save
       redirect_to teacher_clips_path(current_user)
     end
   end
   def destroy
-    @clip = Clip.find(params[:id])
     
+    @clip = Clip.find_by(teacher_id:params[:teacher_id],user_id: current_user.id)
+    @teacher=@clip.teacher
     if @clip.destroy
-      redirect_to user_path(current_user)
+      
+      redirect_to teachers_path,notice: '削除しました'
     end
   end
   def show_clips
