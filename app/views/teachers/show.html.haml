@@ -75,7 +75,10 @@
               %tr
                 %th 講師担当地域
                 %td=@teacher.prefecture
+            
+
         .teacher-details-page-bottom.clearfix
+          %a{:href => "http://twitter.com/share?url=http://qiita.com/katsuma"} Twitter
           .teacher-button-left
           %div{:id => "like-icon-post-#{@teacher.id.to_s}"}
           - if current_user.likes.find_by(teacher_id:@teacher.id)
