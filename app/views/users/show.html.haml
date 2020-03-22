@@ -31,15 +31,16 @@
                       .pickup-section__main
                         .pickup-section__main--teachers
                           -@user.likes.each do |like|
-                            .teachers__list
-                              %figure.teacher
-                                %figucaption.teacher__text
-                                  =like.teacher.name
-                                .teacher__thumbnail
-                                  .teacher__thumbnail--label
-                                  .teacher__thumbnail--image
-                                    =image_tag(like.teacher.images[0].teacher_image.url)
-                              %i.icon-arrow-right
+                            = link_to teacher_path(like.teacher.id), class: "products__list" do
+                              .teachers__list
+                                %figure.teacher
+                                  %figucaption.teacher__text
+                                    =like.teacher.name
+                                  .teacher__thumbnail
+                                    .teacher__thumbnail--label
+                                    .teacher__thumbnail--image
+                                      =image_tag(like.teacher.images[0].teacher_image.url)
+                                %i.icon-arrow-right
                   %li.tab-content-transaction__notfound 登録している先生はいません
                 %ul.tab-content-transaction__old.hide
                   .transaction-item__link__body
@@ -48,15 +49,16 @@
                       .pickup-section__main
                         .pickup-section__main--teachers
                           -@user.clips.each do |clip|
-                            .teachers__list
-                              %figure.teacher
-                                %figucaption.teacher__text
-                                  =clip.teacher.name
-                                .teacher__thumbnail
-                                  .teacher__thumbnail--label
-                                  .teacher__thumbnail--image
-                                    =image_tag(clip.teacher.images[0].teacher_image.url)
-                              %i.icon-arrow-right
+                            = link_to teacher_path(clip.teacher.id), class: "products__list" do
+                              .teachers__list
+                                %figure.teacher
+                                  %figucaption.teacher__text
+                                    =clip.teacher.name
+                                  .teacher__thumbnail
+                                    .teacher__thumbnail--label
+                                    .teacher__thumbnail--image
+                                      =image_tag(clip.teacher.images[0].teacher_image.url)
+                                %i.icon-arrow-right
                     .mypage-go-list
                       
                       =link_to "一覧を見る", teachers_path
