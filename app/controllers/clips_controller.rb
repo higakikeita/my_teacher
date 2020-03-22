@@ -18,7 +18,7 @@ class ClipsController < ApplicationController
     @teacher=@clip.teacher
     if @clip.destroy
       
-      redirect_to root_path
+      redirect_to teachers_path,notice: '削除しました'
     end
   end
   def show_clips
