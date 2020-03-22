@@ -87,11 +87,10 @@
           %div
             
             
-            .test
-              = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
-            .test-c
+            -if current_user.clips.find_by(teacher_id:@teacher.id)
               = link_to "登録を取り消す",teacher_clip_path(@teacher.id),method: :DELETE,remote: true,class:"bnt-massage-c"
-            
+            -else  
+              = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
                 
             
 

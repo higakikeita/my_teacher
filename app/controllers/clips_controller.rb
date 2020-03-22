@@ -17,7 +17,8 @@ class ClipsController < ApplicationController
     @clip = Clip.find_by(teacher_id:params[:teacher_id],user_id: current_user.id)
     @teacher=@clip.teacher
     if @clip.destroy
-      redirect_to teacher_clip_path(current_user)
+      
+      redirect_to root_path
     end
   end
   def show_clips
