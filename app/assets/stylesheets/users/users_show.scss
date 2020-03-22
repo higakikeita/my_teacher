@@ -95,7 +95,98 @@
       height: 100%;
       position: relative;
     }
-      
+    li.tab-content-transaction{
+      background-repeat: no-repeat;
+      background-position: center 40px;
+      background-size: 78px 85px;
+      padding: 160px 0 60px;
+      text-align: center;
+      font-size: 16px;
+      color: #ccc;
+      position: relative;
+      .pickup-section{
+        width: 668px;
+      }
+      .pickup-section__main {
+        background-color: rgb(239, 239, 239);
+        padding: 42px 0px 100px;
+        margin: 0px auto;
+        &--title {
+          margin: 0px auto;
+          width: 1020px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 16px;
+        }
+        &--teachers {
+          margin: 0px auto;
+          width: 1020px;
+          display: flex;
+          flex-wrap: wrap;
+          .teachers__list {
+            width: 182px;
+            height: 230px;
+            margin: 10px;
+
+            .teacher {
+              width: 100%;
+              display: flex;
+              flex-direction: column-reverse;
+              background-color: $White;
+              margin: 0;
+              box-shadow: 0 2px 4px rgba(0,0,0,.18);
+    
+              &__text {
+                color: #222;
+                font-size: 14px;
+                height: 40px;
+                line-height: 1.4em;
+                padding: 0 12px;
+                word-break: break-word;
+                overflow: hidden;
+                margin-top: 8px;
+              }
+    
+              &__thumbnail {
+                overflow: hidden;
+                padding: 0 0 100%;
+                width: 100%;
+                position: relative;
+    
+                &--label {
+                  align-items: center;
+                  background: rgba(0,0,0,0.9);
+                  border-radius: 0 14px 14px 0;
+                  bottom: 8px;
+                  color: $White;
+                  display: inline-flex;
+                  font-size: 17px;
+                  height: 28px;
+                  letter-spacing: .02em;
+                  margin: 0;
+                  padding: 0 12px;
+                  position: absolute;
+                  z-index: 2;
+                  opacity: 0.5;
+                }
+    
+                &--image {
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                  vertical-align: top;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     li.tab-content-transaction__notfound {
       background-repeat: no-repeat;
       background-position: center 40px;
