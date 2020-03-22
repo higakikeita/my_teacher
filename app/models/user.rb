@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :teachers, through: :clips
   has_many :teachers, through: :likes
   mount_uploader :img_name, ImageUploader
-  def already_liked?(teacher)
-    self.likes.exists?(teacher_id: teacher.id)
-  end
+  # def already_liked?(teacher)
+  #   self.likes.exists?(teacher_id: teacher.id)
+  # end
 end
