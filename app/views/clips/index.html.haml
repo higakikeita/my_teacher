@@ -1,10 +1,35 @@
 =render "teachers/teachersheader"
 .main-section
+  #navArea
+    %nav-a
+      .inner
+        %ul
+        
+        %li
+          =link_to "TOPへ戻る",root_path
+        %li
+          =link_to "お気に入り一覧へ",teacher_clips_path(:teacher_id)
+        %li
+          %a{:href => "#index1"} みんながいいねした先生
+        %li
+          %a{:href => "#index2"} 学年別選択
+        %li
+          %a{:href => "#index3"} 科目別選択
+        %li
+          %a{:href => "#"} 無料サポート
+        %li
+          %a{:href => "#"} 家庭教師ワイズについて
+    .toggle_btn
+      %span
+      %span
+      %span
+      
+    #mask
   .pickup-section
     .pickup-section__main
       .pickup-section__main--title
         .main__title--text
-          お気に入りの先生
+          あなたがお気に入りの先生
           .main__title--more
           
           %ul.pickup-section__main--teachers
