@@ -188,3 +188,10 @@
   color: white;
   background-color:#AAAAAA;
 }
+.social-share__btn{
+  display: flex;
+  justify-content: space-between;
+  .line-icon{
+    margin:auto;
+  }
+}

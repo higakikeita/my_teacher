@@ -31,15 +31,23 @@
       .teacher-details__page__main
         %h1.teacher-name
           =@teacher.name
+          .line-it-button{"data-lang" => "ja", "data-lineid" => "@lineteamjp", "data-type" => "friend", :style => "display: none;"}
+          %script{:async => "async", :defer => "defer", :src => "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"}
+
+
         %p.teacher-wording
           =@teacher.explain
         .teacher-details__page__main__content.clearfix
           .teacher-details__page__main__content__image
             =image_tag(@teacher.images[0].teacher_image.url)
-            
-            .owl-dots
-              =link_to "http://twitter.com/share?url=#{request.url}/&text=家庭教師のワイズの先生です",{class:"footer-icon_1"} do
-                %i.fab.fa-twitter.twitter
+            .social-share__btn
+              .twitter-icon
+                =link_to "http://twitter.com/share?url=#{request.url}/&text=家庭教師のワイズの先生です",{class:"footer-icon_1"} do
+                  %i.fab.fa-twitter.twitter
+              .line-icon
+                .line-it-button{"data-color" => "default", "data-count" => "false", "data-lang" => "ja", "data-size" => "large", "data-type" => "share-c", "data-url" => "https://org-media.line.me/ja/how_to_install#lineitbutton", "data-ver" => "3", :style => "display: none;"}
+                %script{:async => "async", :defer => "defer", :src => "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"}
+                
               .owl-dot
                 .owl-dot-inner 
                 .owl-dot-inner
