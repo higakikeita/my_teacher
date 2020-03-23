@@ -38,6 +38,8 @@
             =image_tag(@teacher.images[0].teacher_image.url)
             
             .owl-dots
+              =link_to "http://twitter.com/share?url=#{request.url}/&text=家庭教師のワイズの先生です",{class:"footer-icon_1"} do
+                %i.fab.fa-twitter.twitter
               .owl-dot
                 .owl-dot-inner 
                 .owl-dot-inner
@@ -78,7 +80,7 @@
             
 
         .teacher-details-page-bottom.clearfix
-          %a{:href => "http://twitter.com/share?url=#{request.url}"} Twitter
+          
           .teacher-button-left
           %div{:id => "like-icon-post-#{@teacher.id.to_s}"}
           - if current_user.likes.find_by(teacher_id:@teacher.id)
