@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     end
     resources :likes, only: [:create, :destroy]
     resources :clips, only: [:destroy,:index,:create]
+    resources :comments,only:[:create,:destroy]
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show
