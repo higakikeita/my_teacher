@@ -55,7 +55,9 @@ http://13.112.152.26/
 -belongs_to : user<br>
 -has_many :images<br>
 -has_many :likes<br>
--has_many :clips
+-has_many :clips<br>
+-has_many :comments<br>
+-has_many :messages
 
 ## imagesテーブル
 |Column|Type|Options|
@@ -87,7 +89,9 @@ http://13.112.152.26/
 ### Association
 -has_many: teachers<br>
 -has_many: likes<br>
--has_many: clips
+-has_many: clips<br>
+-has_many: comments<br>
+-has_many: messages
 
 ## likesテーブル
 |Column|Type|Options|
@@ -107,3 +111,23 @@ http://13.112.152.26/
 ### Association
  -belongs_to : user<br>
  -belongs_to : teacher <br>
+### commentテーブル
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|
+|user|references|null: false, foreign_key: true|
+|teacher|references|null: false, foreign_key: true|
+### Association
+-belongs_to : user<br>
+-belongs_to : teacher <br>
+
+### messageテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|message|text|
+|user|references|null: false, foreign_key: true|
+|teacher|references|null: false, foreign_key: true|
+### Association
+-belongs_to : user<br>
+-belongs_to : teacher <br>
