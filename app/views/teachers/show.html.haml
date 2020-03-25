@@ -108,7 +108,7 @@
             
 
           
-        .product-buy__btn__box
+        .teacher__btn__box
           - if user_signed_in? && current_user.id ==@teacher.user_id
             = link_to "削除する", teacher_path(@teacher.id), method: :delete,class:"teacher-details-delete__btn"
 
