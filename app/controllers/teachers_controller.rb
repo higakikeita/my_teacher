@@ -34,6 +34,8 @@ before_action :set_teacher, only: [:show,:edit,:update]
   end
   def show
     @like=Like.new
+    @comment =Comment.new
+    @comments =@teacher.comments.includes(:user).all
   end
   def destroy
     teacher =Teacher.find(params[:id])

@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @teacher.comments.new(comment_params)
     @teacher =@comment.teacher
+    
     @comment.save
       
     
@@ -15,6 +16,6 @@ class CommentsController < ApplicationController
       params.require(:comment).permit(:comment,:teacher_id).merge(user_id: current_user.id)
     end
   def set_teacher
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.find(params[:teacer_id])
   end 
 end
