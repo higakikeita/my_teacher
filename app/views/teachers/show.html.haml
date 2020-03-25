@@ -117,7 +117,7 @@
             - if @teacher.comments
               - @teacher.comments.each do |comment|
                 .one-block
-                  =comment.user.nickname
+                  =comment.user.name
                   .item-comment
                     = simple_format(comment.comment)
           .message-content
