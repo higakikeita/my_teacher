@@ -22,6 +22,7 @@ has_many :comments,dependent: :destroy
 has_many :clips
 has_many :users, through: :clips
 has_many :users, through: :likes
+has_many :messages
 def liked_by(current_user)
   # user_idが一致するlikeを検索する
   Like.find_by(user_id: current_user.id)
