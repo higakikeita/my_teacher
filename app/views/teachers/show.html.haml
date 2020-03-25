@@ -104,10 +104,6 @@
               = link_to "登録を取り消す",teacher_clip_path(@teacher.id),method: :DELETE,remote: true,class:"bnt-massage-c"
             -else  
               = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
-                
-            
-
-          
         .teacher__btn__box
           - if user_signed_in? && current_user.id ==@teacher.user_id
             = link_to "削除する", teacher_path(@teacher.id), method: :delete,class:"teacher-details-delete__btn"
@@ -115,5 +111,23 @@
             = link_to "編集する", edit_teacher_path(@teacher.id),class:"teacher-details-edit__btn" 
           - else
           = link_to "講師一覧ページへ",teachers_path,class:"teacher-details-edit__btn"
+        .teacher-details-commnent__form
+          %h4 ＜コメント一覧＞  
+          .comments-block
+            - if @teacher.comments
+              - @teacher.comments.each do |comment|
+                .one-block
+                  =comment.user.nickname
+                  .item-comment
+                    = simple_format(comment.comment)
+          .message-content
+            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          - if current_user
+            = form_for [@teacher,@comment] do |c|
+              =c.text_area :comment,class:"text_area-default"
+              =c.submit 'コメントする',class:"text_area-default_btn"
+          - else
+            .not-comment
+              コメントはできません
 =render "teachersfooter"
             
