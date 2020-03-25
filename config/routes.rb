@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :comments,only:[:create,:destroy]
   end
   resources :categories, only: [:index, :show]
-  resources :users, only: :show
-  
+  resources :users, only: :show do
+    resources :messages,only:[:create,:destroy]
+  end
 end
