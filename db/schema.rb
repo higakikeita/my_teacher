@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200319022430) do
+ActiveRecord::Schema.define(version: 20200325120410) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20200319022430) do
     t.datetime "updated_at", null: false
     t.index ["teacher_id"], name: "index_clips_on_teacher_id", using: :btree
     t.index ["user_id"], name: "index_clips_on_user_id", using: :btree
+  end
+
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "comment",    limit: 65535
+    t.integer  "user_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["teacher_id"], name: "index_comments_on_teacher_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -77,6 +87,8 @@ ActiveRecord::Schema.define(version: 20200319022430) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "comments", "teachers"
+  add_foreign_key "comments", "users"
   add_foreign_key "images", "teachers"
   add_foreign_key "likes", "teachers"
   add_foreign_key "likes", "users"
