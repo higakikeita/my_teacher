@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @clip= Clip.new
     @clips = @user.clips.includes(:teacher).all
+    @comment =Comment.new
+    @comments =@user.comments.includes(:teacher).all
   end
   # def likes
   #   @user = User.find_by(id: params[:id])
