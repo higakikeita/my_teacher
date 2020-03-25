@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-before_action :set_teacher, only: [:show,:edit,:update]
+before_action :set_teacher, only: [:show,:edit,:update,:comment]
 
   def index
     @elementary = Teacher.category(1)
@@ -79,7 +79,7 @@ private
     params.require(:teacher).permit(:name, :explain,:sex, :university, :category_id, :status,:category_id, :prefecture,:subject, :user_id, images_attributes: [:teacher_image, :id])
   end
   def set_teacher
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.includes(:comments).find(params[:id])
   end 
   
 end
