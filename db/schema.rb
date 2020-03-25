@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200325120410) do
+ActiveRecord::Schema.define(version: 20200325134208) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 20200325120410) do
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
+  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "messages",   limit: 65535
+    t.integer  "user_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["teacher_id"], name: "index_messages_on_teacher_id", using: :btree
+    t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.text     "explain",     limit: 65535
@@ -92,5 +102,7 @@ ActiveRecord::Schema.define(version: 20200325120410) do
   add_foreign_key "images", "teachers"
   add_foreign_key "likes", "teachers"
   add_foreign_key "likes", "users"
+  add_foreign_key "messages", "teachers"
+  add_foreign_key "messages", "users"
   add_foreign_key "teachers", "users"
 end
