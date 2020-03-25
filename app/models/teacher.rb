@@ -18,6 +18,7 @@ belongs_to :user
 accepts_nested_attributes_for :images, allow_destroy: true
 belongs_to :category
 has_many :likes, -> { order(created_at: :desc) }, dependent: :destroy
+has_many :comments,dependent: :destroy
 has_many :clips
 has_many :users, through: :clips
 has_many :users, through: :likes
