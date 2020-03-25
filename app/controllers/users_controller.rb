@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @clip= Clip.new
     @clips = @user.clips.includes(:teacher).all
     @message =Message.new
-    @messages =@user.message.includes(:teacher).all
+    @messages =@user.messages.includes(:teacher).all
 
   end
   # def likes
