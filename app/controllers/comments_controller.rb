@@ -7,7 +7,13 @@ class CommentsController < ApplicationController
     @comment = @teacher.comments.new(comment_params)
     @teacher =@comment.teacher
     
-    @comment.save
+    if @comment.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      redirect_to root_path
+    end
       
     
   end
