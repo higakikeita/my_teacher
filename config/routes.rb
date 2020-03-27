@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :users, only: :show do
     resources :messages,only:[:new,:create,:destroy]
   end
+  resources :chat, only: %i(create show)
 end
