@@ -10,8 +10,15 @@
 <img src="https://user-images.githubusercontent.com/57832553/73936026-3cbf2980-4925-11ea-97b2-274bd60a8fb5.png" height="60px;" style="max-width:100%;">
 <img src="https://user-images.githubusercontent.com/57832553/73935917-fec20580-4924-11ea-9b42-36715e8d4ede.png" height="60px;" style="max-width:100%;">
 
-# 家庭教師派遣センターのwebサイトになります。
+# 家庭教師派遣センターのwebサイト
+# 生徒側からの機能
+# 特徴その１
 ## 自分に合った講師を探すことが出来ます
+# 特徴その２
+## ユーザー同士でリアルタイムチャットができます
+# 講師側からの機能
+講師登録が出来ます。
+自分の都合の良い日を登録出来ます
 ## トップ画面
 [![Image from Gyazo](https://i.gyazo.com/0654ab59c02fe8bd97ef7811ed4c8704.png)](https://gyazo.com/0654ab59c02fe8bd97ef7811ed4c8704)
 ## 新規登録画面
