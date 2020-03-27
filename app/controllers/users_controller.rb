@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @clips = @user.clips.includes(:teacher).all
     @message =Message.new
     @messages =@user.messages.includes(:teacher).all
-
+    
   end
   # def likes
   #   @user = User.find_by(id: params[:id])

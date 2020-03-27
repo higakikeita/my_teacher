@@ -69,7 +69,7 @@
             - if @user.messages
               - @user.messages.each do |message|
                 .one-block
-                  =message.user.name
+                  =@user.name
                   .item-comment
                     = simple_format(message.message)
           .message-content
