@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   end
   resources :categories, only: [:index, :show]
   resources :users, only: :show do
-    resources :messages,only:[:create,:destroy]
+    resources :messages,only:[:new,:create,:destroy]
   end
 end

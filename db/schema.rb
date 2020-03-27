@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20200325134208) do
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "messages",   limit: 65535
+    t.text     "message",    limit: 65535
     t.integer  "user_id"
     t.integer  "teacher_id"
     t.datetime "created_at",               null: false
