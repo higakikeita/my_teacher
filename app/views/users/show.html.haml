@@ -26,6 +26,7 @@
                   
               .tab-content-transaction
                 %ul.tab-content-transaction__now
+                  .transaction-item__link__body
                   %li.tab-content-transaction 
                     .pickup-section
                       .pickup-section__main
@@ -41,7 +42,7 @@
                                     .teacher__thumbnail--image
                                       =image_tag(like.teacher.images[0].teacher_image.url)
                                 %i.icon-arrow-right
-                  %li.tab-content-transaction__notfound 登録している先生はいません
+                  -# %li.tab-content-transaction__notfound 登録している先生はいません
                 %ul.tab-content-transaction__old.hide
                   .transaction-item__link__body
                   %li.transaction-item__link__body__text
