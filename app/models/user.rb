@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :teachers, through: :likes
   has_many :comments
   has_many :messages,dependent: :destroy
+  has_many :chat_messages
+  has_many :chat_room_users
   mount_uploader :img_name, ImageUploader
   # def already_liked?(teacher)
   #   self.likes.exists?(teacher_id: teacher.id)
