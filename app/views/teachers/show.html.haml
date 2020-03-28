@@ -92,18 +92,28 @@
           .teacher-button-left
           %div{:id => "like-icon-post-#{@teacher.id.to_s}"}
           - if current_user.likes.find_by(teacher_id:@teacher.id)
-            =link_to "いいねを取り消す", teacher_like_path(@teacher.id), method: :DELETE, remote: true, class: "loved hide-text"
-          -else
-            =link_to "いいね", teacher_likes_path(@teacher), method: :POST, remote: true, class: "love hide-text"
+            = link_to "いいねを取り消す", teacher_like_path(@teacher.id, @teacher.liked_by(current_user)), method: :DELETE, remote: true, class: "loved hide-text"
+          - else
+            = link_to "いいね", teacher_likes_path(@teacher), method: :POST, remote: true, class: "love hide-text"
           %div{:id => "like-text-post-#{@teacher.id.to_s}"}
-            = render "likes/like", { likes: @teacher.likes }
-          %div
+          = render "likes/like", { likes: @teacher.likes }
+
+
+
+          -#   %div{:id => "like-icon-post-#{@teacher.id.to_s}"}
+          -# - if @teacher.liked_by(current_user).present?
+          -#   =link_to "いいねを取り消す", teacher_like_path(@teacher.id), method: :DELETE, remote: true, class: "loved hide-text"
+          -# -else
+          -#   =link_to "いいね", teacher_likes_path(@teacher), method: :POST, remote: true, class: "love hide-text"
+          -# %div{:id => "like-text-post-#{@teacher.id.to_s}"}
+          -#   = render "likes/like", { likes: @teacher.likes }
+          -# %div
             
             
-            -if current_user.clips.find_by(teacher_id:@teacher.id)
-              = link_to "登録を取り消す",teacher_clip_path(@teacher.id),method: :DELETE,remote: true,class:"bnt-massage-c"
-            -else  
-              = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
+        -if current_user.clips.find_by(teacher_id:@teacher.id)
+          = link_to "登録を取り消す",teacher_clip_path(@teacher.id),method: :DELETE,remote: true,class:"bnt-massage-c"
+        -else  
+          = link_to "この先生を登録", add_teacher_path(@teacher), method: :post,class:"bnt-massage-c"
         .teacher__btn__box
           - if user_signed_in? && current_user.id ==@teacher.user_id
             = link_to "削除する", teacher_path(@teacher.id), method: :delete,class:"teacher-details-delete__btn"

@@ -1,4 +1,13 @@
 
+.love {
+  background-image: image-url("parts5");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 36px !important;
+}
+
+
 .loved {
   background-image: image-url("parts7");
   background-repeat: no-repeat;
@@ -12,11 +21,4 @@
   overflow: hidden;
   text-indent: 110%;
   white-space: nowrap;
-}
-.love {
-  background-image: image-url("parts5");
-  background-repeat: no-repeat;
-  height: 36px;
-  width: 36px;
-  background-size: 36px !important;
 }
