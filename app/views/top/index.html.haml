@@ -48,7 +48,7 @@
                 - else
                   = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
             .swiper-slide
-              = image_tag 'teacher.jpg', alt: 'swipe02',id:"swiper-image"
+              = image_tag 'p1.jpg', alt: 'swipe02',id:"swiper-image"
               .swiper__text
                 .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
                 入会金や退会金は一切かかりません。
@@ -118,20 +118,20 @@
     %section.showcase
       .container-fluid.p-0
         .row.no-gutters.effect-fade
-          .col-lg-6.order-lg-2.text-white.showcase-img{:style => "background-image: url(#{asset_path"bg-showcase-1.jpg"});"}
+          .col-lg-6.order-lg-2.text-white.showcase-img{:style => "background-image: url(#{asset_path"pict_chiba_06.jpg"});"}
           .col-lg-6.order-lg-1.my-auto.showcase-text
             %h2 学習サポート、カウンセリングは全て無料
             %p.lead.mb-0 ｢勉強が苦手な子｣は､授業では恥ずかしくて質問できなかったり､そもそも『質問の仕方がわからない』ので､わからない所をそのままにしてしまいがちです。
             ワイズでは『質問の仕方』がわからなくても､分からない問題をFAXやスマホのカメラで送るだけ！その後は､学習サポートスタッフがメールや電話で連絡して､お子さんの弱点を突き止めて､｢できた!｣の自信に変わるまで丁寧に導きます。
         .row.no-gutters.effect-fade
-          .col-lg-6.text-white.showcase-img{:style => "background-image: url(#{asset_path"bg-showcase-2.jpg"});"}
+          .col-lg-6.text-white.showcase-img{:style => "background-image: url(#{asset_path"teacher.jpg"});"}
           .col-lg-6.my-auto.showcase-text
             %h2 家計にやさしい家庭教師センターです
             %p.lead.mb-0 「家庭教師って料金が高い！」というイメージを持たれている方も少なくないと思います。が、、
             ワイズは「家計に優しい家庭教師」なので、他の家庭教師会社や塾よりも低料金でできるご家庭も多いかと思います！
             そして、ワイズなら他にも「家計にやさしい」お得な割引プランが盛り沢山なのです！
         .row.no-gutters.effect-fade
-          .col-lg-6.order-lg-2.text-white.showcase-img{:style => "background-image: url(#{asset_path"bg-showcase-3.jpg"});"}
+          .col-lg-6.order-lg-2.text-white.showcase-img{:style => "background-image: url(#{asset_path"DSC_0118.JPG"});"}
           .col-lg-6.order-lg-1.my-auto.showcase-text
             %h2 自分に合った先生を何回でも選べます
             %p.lead.mb-0 担当教師は何度でも交換無料です。お子様にあった先生をマッチングシステムで何回でも選択可能です
@@ -151,19 +151,19 @@
       .container.effect-fade
         %h2.mb-5 私たちが運営しています
         .row
-          .col-lg-4
+          .col-lg-4.effect-fade
             .testimonial-item.mx-auto.mb-5.mb-lg-0
               %img.img-fluid.rounded-circle.mb-3{:alt => "", :src => "#{asset_path"kotaro.jpg"}"}/
               
               %h5 Kotaro S.
               %p.font-weight-light.mb-0 名誉会長<br>うちに任せておけば安心！！！
-          .col-lg-4
+          #effect2.col-lg-4.effect-fade
             .testimonial-item.mx-auto.mb-5.mb-lg-0
               %img.img-fluid.rounded-circle.mb-3{:alt => "", :src => "#{asset_path"keichan.jpg"}"}
               %h5 Keita Higaki
               %p.font-weight-light.mb-0 WEB制作担当<br>
               地域密着型の家庭教師センターです。ここより親身にんってくれるところはなかなかないのでは？
-          .col-lg-4
+          #effect3.col-lg-4.effect-fade
             .testimonial-item.mx-auto.mb-5.mb-lg-0
               %img.img-fluid.rounded-circle.mb-3{:alt => "", :src => "#{asset_path"https://i.gyazo.com/2676e97a67597be55c8081a156cfacf6.png"}"}
               %h5 Yasuyuki M.
