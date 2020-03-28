@@ -299,11 +299,11 @@ a{
 }
 .effect-fade {
   opacity : 0;
-  transform : translate(0, 45px);
-  transition : all 300ms;
+  transform : translate(0, 200px);
+  transition : all 600ms;
 }
   
-  .effect-fade.effect-scroll {
+.effect-fade.effect-scroll {
   opacity : 1;
   transform : translate(0, 0);
   }
