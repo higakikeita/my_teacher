@@ -307,3 +307,16 @@ a{
   opacity : 1;
   transform : translate(0, 0);
   }
+  
+#effect2.col-lg-4.effect-fade{
+-moz-transition-delay:300ms;
+-webkit-transition-delay:300ms;
+-o-transition-delay:300ms;
+-ms-transition-delay:300ms;
+    }
+#effect3.col-lg-4.effect-fade{
+  -moz-transition-delay:600ms;
+  -webkit-transition-delay:600ms;
+  -o-transition-delay:600ms;
+  -ms-transition-delay:600ms;
+      }
