@@ -58,7 +58,7 @@
           =render "teacherlike",teacher:teacher
         
   .pickup-section.effect-fade
-    .pickup-section__header
+    .pickup-section__header.hoverNav
       #index2
       .pickup-section__header--title
         学年から先生を選んでみよう
@@ -143,10 +143,12 @@
           = render "teacher", teacher: teacher
 
   .pickup-section.effect-fade
-    .pickup-section__header
+    .pickup-section__header.hoverNav
       #index3
       .pickup-section__header--title
         科目から選ぶ
+    
+
       %ul.pickup-section__header--list
         %li.header__list--logo
           %a{href: "#arithmatic"} 小学算数
