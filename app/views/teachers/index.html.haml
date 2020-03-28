@@ -77,7 +77,7 @@
           %a{href: "#entrance_exam"} 大学受験
 
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #elementary
           .main__title--text
@@ -88,7 +88,7 @@
         - @elementary.each do |teacher|
           = render "teacher", teacher: teacher 
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #junior_high
           .main__title--text
@@ -99,7 +99,7 @@
         - @junior_high.each do |teacher|
           = render "teacher", teacher: teacher
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #highschool
           .main__title--text
@@ -109,7 +109,7 @@
       %ul.pickup-section__main--teachers
         - @highschool.each do |teacher|
           = render "teacher", teacher: teacher
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #entrance_junior
           .main__title--text
@@ -120,7 +120,7 @@
         - @entrance_junior.each do |teacher|
           = render "teacher", teacher: teacher 
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #entrance_high
           .main__title--text
@@ -131,7 +131,7 @@
         - @entrance_high.each do |teacher|
           = render "teacher", teacher: teacher 
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #entrance_exam
           .main__title--text
@@ -142,7 +142,7 @@
         - @entrance_exam.each do |teacher|
           = render "teacher", teacher: teacher
 
-  .pickup-section
+  .pickup-section.effect-fade
     .pickup-section__header
       #index3
       .pickup-section__header--title
@@ -166,7 +166,7 @@
           %a{href: "#highschool-society"} 高校社会
         %li.header__list--logo
           %a{href: "#highschool-science"} 高校理科
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #arithmatic
           .main__title--text
@@ -177,7 +177,7 @@
         - @arithmatic.each do |teacher|
           = render "teacher", teacher: teacher
         
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #elementary-english
           .main__title--text
@@ -188,7 +188,7 @@
         - @mathematic.each do |teacher|
           = render "teacher", teacher: teacher
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #junior-high-math
           .main__title--text
@@ -199,7 +199,7 @@
         - @mathematic.each do |teacher|
           = render "teacher", teacher: teacher
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #junior-high-english
           .main__title--text
@@ -209,7 +209,7 @@
       %ul.pickup-section__main--teachers
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #highschool-math
           .main__title--text
@@ -219,7 +219,7 @@
       %ul.pickup-section__main--teachers
         - @mathematic.each do |teacher|
           = render "teacher", teacher: teacher
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #highschool-english
           .main__title--text
@@ -229,7 +229,7 @@
       %ul.pickup-section__main--teachers
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #highschool-japanese
           .main__title--text
@@ -239,7 +239,7 @@
       %ul.pickup-section__main--teachers
         - @japanese.each do |teacher|
           = render "teacher", teacher: teacher
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #highschool-science
           .main__title--text
@@ -250,7 +250,7 @@
         - @english.each do |teacher|
           = render "teacher", teacher: teacher
 
-    .pickup-section__main
+    .pickup-section__main.effect-fade
       .pickup-section__main--title
         #highschool-society
           .main__title--text
