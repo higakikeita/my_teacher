@@ -6,6 +6,8 @@ $(function () {
       var windowHeight = $(window).height();
       if (scroll > elemPos - windowHeight) {
         $(this).addClass('effect-scroll');
+      } else {
+        $(this).removeClass('effect-scroll');
       }
     });
   });
