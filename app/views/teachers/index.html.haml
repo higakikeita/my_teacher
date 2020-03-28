@@ -45,7 +45,7 @@
       .swiper-button-next
       -# if need pagination 
         .swiper-pagination
-  .pickup-section
+  .pickup-section.effect-fade
     .pickup-section__header
       #index1
       .pickup-section__header--title
@@ -57,7 +57,7 @@
         - @all_ranks.each do |teacher|
           =render "teacherlike",teacher:teacher
         
-  .pickup-section
+  .pickup-section.effect-fade
     .pickup-section__header
       #index2
       .pickup-section__header--title
