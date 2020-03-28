@@ -297,3 +297,13 @@
 a{
   color: black;
 }
+.effect-fade {
+  opacity : 0;
+  transform : translate(0, 200px);
+  transition : all 600ms;
+}
+  
+.effect-fade.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+  }
