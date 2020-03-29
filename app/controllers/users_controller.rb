@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_action :set_clips 
   def index
-    
+    @user = User.all
   end
   def show
     @user = User.find_by(id: params[:id])

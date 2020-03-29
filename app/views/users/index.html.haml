@@ -1,3 +1,4 @@
+= @user.name
 = form_tag :chat_index, method: :post do
-  %input{:name => "user_id", :type => "hidden", :value => "#{user.id}"}/
+  %input{:name => "user_id", :type => "hidden", :value => "#{@user.ids}"}/
   = submit_tag 'チャットを開く', class: "chatForm_btn"
