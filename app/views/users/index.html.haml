@@ -1,4 +1,11 @@
-= @user.name
-= form_tag :chat_index, method: :post do
-  %input{:name => "user_id", :type => "hidden", :value => "#{@user.ids}"}/
-  = submit_tag 'チャットを開く', class: "chatForm_btn"
+-@users.each do |user|
+  .userInfo_name
+    = user.name
+  .userInfo_img
+    - if user.img_name.present?
+      = image_tag user.img_name.url(:thumb)
+    - else
+      = image_tag "kotaro.jpg",width:"170px",height:"170px",class:"userInfo_img"
+  = form_tag :chat_index, method: :post do
+    %input{:name => "user_id", :type => "hidden", :value => "#{user.id}"}/
+    = submit_tag 'チャットを開く', class: "chatForm_btn"
