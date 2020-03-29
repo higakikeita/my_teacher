@@ -149,3 +149,32 @@ http://13.112.152.26/
 ### Association
 -belongs_to : user<br>
 -belongs_to : teacher <br>
+## chatroomテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|
+### Association
+-has_many :chat_messages<br>
+-has_many :chat_room_users
+
+## chat_room_userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|
+|chat_room_id|integer|
+|user_id|integer|
+
+### Association
+-belongs_to :chat_room<br>
+-belongs_to :user
+## chat_message
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|
+|chat_room_id|integer|
+|user_id|integer|
+|message|string|
+
+### Association
+-belongs_to :chat_room<br>
+-belongs_to :user
