@@ -60,11 +60,7 @@
                                     .teacher__thumbnail--image
                                       =image_tag(clip.teacher.images[0].teacher_image.url)
                                 %i.icon-arrow-right
-                    .mypage-go-list
-                      
-                      =link_to "一覧を見る", teachers_path
-                    .mypage-go-list-a
-                      = link_to "ユーザー一覧へ",users_path
+                    
         .mypage-details-message__form
           %h4 ＜コメント一覧＞  
           .comments-block
@@ -83,6 +79,11 @@
           - else
             .not-comment
               コメントはできません    
+        .mypage-go-list
+                        
+          =link_to "講師一覧を見る", teachers_path,class:"teacher-details-edit__btn"
+        .mypage-go-list
+          = link_to "ユーザー一覧へ",users_path,class:"user-list__btn"
 -# = form_tag :chat_index, method: :post do
 -#   %input{:name => "user_id", :type => "hidden", :value => "#{@user.id}"}/
 -#   = submit_tag 'チャットを開く', class: "chatForm_btn"

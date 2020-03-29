@@ -316,10 +316,21 @@
         position: 45.703 16 31.719 675.406px;
       }
     }
-    .hide {display: none;}
+    .hide {display: none;
+    }
 }
 }
 }
 
 }
+}
+.mypage-go-list{
+  .teacher-details-edit__btn {
+    background:$Red;
+    @include product-buy;
+  }
+  .user-list__btn {
+    background:#aaa;
+    @include product-buy;
+  }
 }
