@@ -42,12 +42,18 @@
             =image_tag(@teacher.images[0].teacher_image.url)
             .social-share__btn
               .twitter-icon
-                =link_to "http://twitter.com/share?url=#{request.url}/&text=家庭教師のワイズの先生です",{class:"footer-icon_1"} do
+                =link_to "http://twitter.com/share?url=#{request.url}/&text=家庭教師のワイズの先生です/&hashtags=成績UP",{class:"footer-icon_1"} do
                   %i.fab.fa-twitter.twitter
+              
               .line-icon
                 .line-it-button{"data-color" => "default", "data-count" => "false", "data-lang" => "ja", "data-size" => "large", "data-type" => "share-c", "data-url" => "https://org-media.line.me/ja/how_to_install#lineitbutton", "data-ver" => "3", :style => "display: none;"}
                 %script{:async => "async", :defer => "defer", :src => "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"}
-                
+              .facebook-icon
+                #fb-root
+                %script{:async => "", :crossorigin => "anonymous", :defer => "defer", :src => "https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v6.0"}
+              .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-size" => "large"}
+                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", :target => "_blank"} 
+
               .owl-dot
                 .owl-dot-inner 
                 .owl-dot-inner
