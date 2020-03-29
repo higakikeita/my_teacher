@@ -1,0 +1,4 @@
+- @teachers.each do |teacher|
+  = link_to teacher_search_path(teacher.id), class: "products__list" do
+    .search-name
+    = teacher.name
