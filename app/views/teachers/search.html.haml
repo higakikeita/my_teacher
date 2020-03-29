@@ -1,4 +1,20 @@
+=render "teachersheader"
 - @teachers.each do |teacher|
   = link_to teacher_search_path(teacher.id), class: "products__list" do
-    .search-name
-    = teacher.name
+    %li.teachers__list.effect-fade
+      %figure.teacher
+        %figucaption.teacher__text
+          = teacher.name
+        .teacher__thumbnail
+          .teacher__thumbnail--label
+            
+          .teacher__thumbnail--image
+            - if teacher.images.present?
+              =image_tag (teacher.images[0].teacher_image.url)
+            - else
+              = image_tag "no_image.png"
+.teacher-exhibition
+= link_to "講師一覧ページへ",teachers_path,class:"teacher-details-edit__btn"
+=render "teachersfooter"
+            
+            
