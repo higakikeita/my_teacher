@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root "top#index"
   
   resources :teachers do
+    get 'search', to: 'teachers#search'
     collection do
       get 'search_child', defaults: { format: 'json' }
       get 'search_grandchild', defaults: { format: 'json' }

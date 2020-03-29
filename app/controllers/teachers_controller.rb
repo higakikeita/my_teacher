@@ -74,7 +74,10 @@ before_action :set_ransack
     end
   end
   
-   
+  def search
+    @q = Teacher.search(search_params)
+    @teachers = @q.result(distinct: true)
+  end 
   
 private
   def teacher_params
@@ -88,5 +91,8 @@ private
   end 
   def set_ransack
     @q        = Teacher.ransack(params[:q])
+  end
+  def search_params
+    params.require(:q).permit!
   end
 end
