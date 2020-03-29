@@ -13,6 +13,8 @@ before_action :set_teacher, only: [:show,:edit,:update,:comment]
     @japanese = Teacher.subject(9)
     @mathematic = Teacher.subject(8)
     @all_ranks = Teacher.find(Like.group(:teacher_id).order('count(teacher_id) desc').limit(5).pluck(:teacher_id))
+    @q        = Teacher.search(params[:q])
+    @teachers = @q.result(distinct: true)
   end
 
   def new
