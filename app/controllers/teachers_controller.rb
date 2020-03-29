@@ -1,5 +1,6 @@
 class TeachersController < ApplicationController
 before_action :set_teacher, only: [:show,:edit,:update,:comment]
+before_action :set_ransack
 
   def index
     @elementary = Teacher.category(1)
@@ -13,7 +14,7 @@ before_action :set_teacher, only: [:show,:edit,:update,:comment]
     @japanese = Teacher.subject(9)
     @mathematic = Teacher.subject(8)
     @all_ranks = Teacher.find(Like.group(:teacher_id).order('count(teacher_id) desc').limit(5).pluck(:teacher_id))
-    @q        = Teacher.search(params[:q])
+    @q        = Teacher.ransack(params[:q])
     @teachers = @q.result(distinct: true)
   end
 
@@ -73,6 +74,8 @@ before_action :set_teacher, only: [:show,:edit,:update,:comment]
     end
   end
   
+   
+  
 private
   def teacher_params
     params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:subject,:prefecture,:university,images_attributes:[:teacher_image,:id]).merge(user_id: current_user.id)
@@ -83,5 +86,7 @@ private
   def set_teacher
     @teacher = Teacher.includes(:comments).find(params[:id])
   end 
-  
+  def set_ransack
+    @q        = Teacher.ransack(params[:q])
+  end
 end
