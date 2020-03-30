@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   # before_action :set_clips 
+
+  before_action :set_ransack
   def index
     @users = User.all
     @q        = Teacher.ransack(params[:q])
@@ -13,6 +15,8 @@ class UsersController < ApplicationController
     @messages =@user.messages.includes(:teacher).all
     
   end
-  
+  def set_ransack
+    @q        = Teacher.ransack(params[:q])
+  end
 end
 
