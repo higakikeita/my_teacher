@@ -12,15 +12,15 @@ $(function () {
   //閉じるボタンがクリックされたら
   $('a.close_btn').click(function () {
     //クリックされたa.close_btnの親要素の.accordion_oneの.accordion_innerを閉じる。
-    $(this).parents('.pickup-section.pickup-section__header--title').slideUp();
+    $(this).parents('.pickup-section__menu').slideUp();
     $('.pickup-section__header').removeClass("open");
   });
 });
 
-// ページ内リンク
+ページ内リンク
 $(function () {
   // 閉じるボタンをクリックした場合に処理
-  $('.s_06 a.close_btn').click(function () {
+  $('.a.close_btn').click(function () {
     // 移動先を0px上にずらす
     var adjust = 0;
     // スクロールの速度

@@ -84,6 +84,11 @@
               小学生コースの指導陣
             .main__title--more
             %a.button{:href => "#index2"} ▲ コース別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @elementary.each do |teacher|
             = render "teacher", teacher: teacher 
@@ -95,6 +100,11 @@
               中学生コースの講師陣
             .main__title--more
             %a.button{:href => "#index2"} ▲ コース別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @junior_high.each do |teacher|
             = render "teacher", teacher: teacher
@@ -106,6 +116,11 @@
               高校生コースの講師陣
             .main__title--more
             %a.button{:href => "#index2"} ▲ コース別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @highschool.each do |teacher|
             = render "teacher", teacher: teacher
@@ -116,6 +131,11 @@
               中学受験コースの講師陣
             .main__title--more
             %a.button{:href => "#index2"} ▲ コース別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @entrance_junior.each do |teacher|
             = render "teacher", teacher: teacher 
@@ -127,10 +147,15 @@
               高校受験コースの講師陣
             .main__title--more
             %a.button{:href => "#index2"} ▲ コース別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @entrance_high.each do |teacher|
             = render "teacher", teacher: teacher 
-
+          
       .pickup-section__main.effect-fade
         .pickup-section__main--title
           #entrance_exam
@@ -138,6 +163,11 @@
               大学受験コースの講師陣
             .main__title--more
             %a.button{:href => "#index2"} ▲ コースにもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @entrance_exam.each do |teacher|
             = render "teacher", teacher: teacher
@@ -176,6 +206,11 @@
               小学算数講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @arithmatic.each do |teacher|
             = render "teacher", teacher: teacher
@@ -187,6 +222,11 @@
               小学英語講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @mathematic.each do |teacher|
             = render "teacher", teacher: teacher
@@ -198,6 +238,11 @@
               中学数学講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @mathematic.each do |teacher|
             = render "teacher", teacher: teacher
@@ -209,6 +254,11 @@
               中学英語講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @english.each do |teacher|
             = render "teacher", teacher: teacher
@@ -219,6 +269,11 @@
               高校数学講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @mathematic.each do |teacher|
             = render "teacher", teacher: teacher
@@ -229,6 +284,11 @@
               高校英語講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @english.each do |teacher|
             = render "teacher", teacher: teacher
@@ -239,6 +299,11 @@
               高校国語講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @japanese.each do |teacher|
             = render "teacher", teacher: teacher
@@ -249,6 +314,12 @@
               高校理科講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
+
         %ul.pickup-section__main--teachers
           - @english.each do |teacher|
             = render "teacher", teacher: teacher
@@ -260,6 +331,11 @@
               高校社会講師陣
             .main__title--more
             %a.button{:href => "#index3"} ▲ 科目別にもどる
+            .close_box
+            %a.close_btn{:href => "#ac1_b"}
+              閉じる
+              .i_box
+                %i.one_i
         %ul.pickup-section__main--teachers
           - @english.each do |teacher|
             = render "teacher", teacher: teacher
