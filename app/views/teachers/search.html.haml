@@ -1,18 +1,51 @@
 =render "teachersheader"
-- @teachers.each do |teacher|
-  = link_to teacher_search_path(teacher.id), class: "products__list" do
-    %li.teachers__list.effect-fade
-      %figure.teacher
-        %figucaption.teacher__text
-          = teacher.name
-        .teacher__thumbnail
-          .teacher__thumbnail--label
-            
-          .teacher__thumbnail--image
-            - if teacher.images.present?
-              =image_tag (teacher.images[0].teacher_image.url)
-            - else
-              = image_tag "no_image.png"
+.main-section
+  #navArea
+    %nav-a
+      .inner
+        %ul
+        
+        %li
+          =link_to "TOPへ戻る",root_path
+        %li
+          =link_to "お気に入り一覧へ",teacher_clips_path(:teacher_id)
+        %li
+          %a{:href => "#index1"} みんながいいねした先生
+        %li
+          %a{:href => "#index2"} 学年別選択
+        %li
+          %a{:href => "#index3"} 科目別選択
+        %li
+          %a{:href => "#"} 無料サポート
+        %li
+          %a{:href => "#"} 家庭教師ワイズについて
+    .toggle_btn
+      %span
+      %span
+      %span
+      
+    #mask
+  .pickup-section
+    .pickup-section__main
+      .pickup-section__main--title
+        .main__title--text
+          探してみた結果
+          .main__title--more
+          %ul.pickup-section__main--teachers
+            - @teachers.each do |teacher|
+              = link_to teacher_search_path(teacher.id), class: "products__list" do
+                %li.teachers__list.effect-fade
+                  %figure.teacher
+                    %figucaption.teacher__text
+                      = teacher.name
+                    .teacher__thumbnail
+                      .teacher__thumbnail--label
+                        
+                      .teacher__thumbnail--image
+                        - if teacher.images.present?
+                          =image_tag (teacher.images[0].teacher_image.url)
+                        - else
+                          = image_tag "no_image.png"
 .teacher-exhibition
 = link_to "講師一覧ページへ",teachers_path,class:"teacher-details-edit__btn"
 =render "teachersfooter"

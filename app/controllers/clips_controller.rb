@@ -1,4 +1,5 @@
 class ClipsController < ApplicationController
+  before_action :set_ransack
   def index
     @user = current_user
     @clips = Clip.where(user_id: @user.id).all
@@ -25,5 +26,8 @@ class ClipsController < ApplicationController
     @teacher = Teacher.find(params[:id])
     @clips = Clip.where(teacher_id: @teacher.id).all
     
+  end
+  def set_ransack
+    @q        = Teacher.ransack(params[:q])
   end
 end
