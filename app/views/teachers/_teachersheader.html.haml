@@ -3,9 +3,9 @@
     %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "20%"}/
     
     = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
-      = f.search_field :name_cont,  class: 'form', placeholder: '何かお探しですか？', id: "form__box"
-  .search-buttom
-    = button_tag type:'submit',class:'search-button'
+      = f.search_field :name_cont,  class: 'form-a', placeholder: '何かお探しですか？', id: "form-a__box"
+    .search-buttom
+    =button_tag "検索する",type:'submit',class:'search-button'
 
 
     .more-information

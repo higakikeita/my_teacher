@@ -97,7 +97,7 @@
   }
 }
 
-.search_container{
+.form-a{
   box-sizing: border-box;
   position: relative;
   border: 1px solid #999;
@@ -106,15 +106,18 @@
   height: 2.3em;
   width: 260px;
   overflow: hidden;
+
+  .form-a{
+    border: none;
+    height: 2.0em;
+  
+  .form-a:focus {
+    outline: 0;
+  }
+   
 }
-.search_container input[type="text"]{
-  border: none;
-  height: 2.0em;
-}
-.search_container input[type="text"]:focus {
-  outline: 0;
-}
-.search_container input[type="submit"]{
+
+.search-button{
   cursor: pointer;
   font-family: FontAwesome;
   font-size: 1.3em;
@@ -127,4 +130,5 @@
   right: 0;
   top: -10px;
   outline : none;
+}
 }
