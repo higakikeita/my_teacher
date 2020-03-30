@@ -223,7 +223,7 @@
   &__box {
     width: 160px;
     height: 160px;
-    background-color: rgb(234, 53, 45);
+    background-color: rgb(20, 163, 27);
     border-radius: 50%;
 
     &--text {
@@ -239,6 +239,9 @@
   }
   a.register-tab__box__text{
     color: $header-icon;
+  }
+  .register-tab__box:hover{
+    background-color: rgb(32, 13, 117);
   }
 }
 
