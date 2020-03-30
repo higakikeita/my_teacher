@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   # before_action :set_clips 
   def index
     @users = User.all
-    
+    @q        = Teacher.ransack(params[:q])
+    @teachers = @q.result(distinct: true)
   end
   def show
     @user = User.find_by(id: params[:id])
