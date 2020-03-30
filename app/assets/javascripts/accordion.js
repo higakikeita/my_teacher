@@ -17,7 +17,7 @@ $(function () {
   });
 });
 
-ページ内リンク
+// ページ内リンク
 $(function () {
   // 閉じるボタンをクリックした場合に処理
   $('.a.close_btn').click(function () {
