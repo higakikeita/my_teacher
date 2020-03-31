@@ -61,31 +61,29 @@
                                       =image_tag(clip.teacher.images[0].teacher_image.url)
                                 %i.icon-arrow-right
                     
-        .mypage-details-message__form
-          %h4 ＜コメント一覧＞  
-          .comments-block
-            - if @user.messages
-              - @user.messages.each do |message|
-                .one-block
-                  =@user.name
-                  .item-comment
-                    = simple_format(message.message)
-          .message-content
-            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          - if current_user
-            = form_for [@user,@message] do |c|
-              =c.text_area :message,class:"text_area-default"
-              =c.submit 'コメントする',class:"text_area-default_btn"
-          - else
-            .not-comment
-              コメントはできません    
-        .mypage-go-list
-                        
-          =link_to "講師一覧を見る", teachers_path,class:"teacher-details-edit__btn"
-        .mypage-go-list
-          = link_to "ユーザー一覧へ",users_path,class:"user-list__btn"
--# = form_tag :chat_index, method: :post do
--#   %input{:name => "user_id", :type => "hidden", :value => "#{@user.id}"}/
--#   = submit_tag 'チャットを開く', class: "chatForm_btn"
+          .mypage-details-message__form
+            %h4 ＜コメント一覧＞  
+            .comments-block
+              - if @user.messages
+                - @user.messages.each do |message|
+                  .one-block
+                    =@user.name
+                    .item-comment
+                      = simple_format(message.message)
+            .message-content
+              %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            - if current_user
+              = form_for [@user,@message] do |c|
+                =c.text_area :message,class:"text_area-default"
+                =c.submit 'コメントする',class:"text_area-default_btn"
+            - else
+              .not-comment
+                コメントはできません    
+          .mypage-go-list
+                          
+            =link_to "講師一覧を見る", teachers_path,class:"teacher-details-edit__btn"
+          .mypage-go-list
+            = link_to "ユーザー一覧へ",users_path,class:"user-list__btn"
+
 
 =render "teachers/teachersfooter"   
