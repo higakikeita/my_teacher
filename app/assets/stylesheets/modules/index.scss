@@ -223,18 +223,32 @@
   &__box {
     width: 160px;
     height: 160px;
+    border-radius: 1.5rem;
     background-color: rgb(20, 163, 27);
-    border-radius: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    overflow: hidden;
 
     &--text {
       font-size: 22px;
       color: $header-icon;
-      padding-top: 32px;
+      padding-top: 10px;
+      padding-left: 30px;
+      -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     }
     
     &--logo {
       font-size: 58px;
       color: $header-icon;
+      padding-top:10px;
+      padding-right:3.3rem;
+
+      -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     }
   }
   a.register-tab__box__text{
