@@ -8,7 +8,13 @@ class MessagesController < ApplicationController
     
     @user=@message.user
     
-    @message.save
+    if @message.save
+      respond_to do |format|
+       format.json
+      end
+    else
+      redirect_to root_path
+    end
     
   end
   private
