@@ -2,12 +2,12 @@
   .chatPage
     %header.header
       -# = link_to "", chat_path, class: "linkToMatching"
-    -@chat_room_user.each do |user|
+      
       .chatPartner
         .chatPartner_img
-        -# = image_tag @chat_room_user.user.img_name.url(:thumb)
+        = image_tag @chat_room_user.user.img_name.url(:thumb)
         .chatPartner_name
-        -# = @chat_room_user.user.name
+        = @chat_room_user.user.name
       .container
         .messagesArea.messages
           = render @chat_messages
