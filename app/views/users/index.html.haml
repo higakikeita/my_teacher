@@ -44,7 +44,7 @@
                       .user__thumbnail--label
                       .user__thumbnail--image 
                         -if user.img_name.present?
-                          = image_tag user.img_name.url(:thumb)
+                          = higakin
                         -else
                           = image_tag "kotaro.jpg",width:"170px",height:"170px",class:"userInfo_img"
                 = form_tag :chat_index, method: :post do
