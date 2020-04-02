@@ -1,0 +1,17 @@
+%h4 ＜コメント一覧＞  
+.comments-block
+  - if @teacher.comments
+    - @teacher.comments.each do |comment|
+      .one-block
+        =comment.user.name
+        .item-comment
+          = simple_format(comment.comment)
+.message-content
+  %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+- if current_user
+  = form_for [@teacher,@comment] do |c|
+    =c.text_area :comment,class:"text_area-default"
+    =c.submit 'コメントする',class:"text_area-default_btn"
+- else
+  .not-comment
+    コメントはできません
