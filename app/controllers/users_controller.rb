@@ -6,14 +6,14 @@ class UsersController < ApplicationController
     @users = User.all
     @q        = Teacher.ransack(params[:q])
     @teachers = @q.result(distinct: true)
-    @users = User.page(params[:page]).per(10)
+    @users = User.page(params[:page]).per(3)
   end
   def show
     @user = User.find_by(id: params[:id])
     @clip= Clip.new
     @clips = @user.clips.includes(:teacher).all
     @message =Message.new
-    @messages =@user.messages.includes(:teacher).all
+    @messages =@user.messages.includes(:teacher).page(params[:page]).per(3) 
     
   end
   def set_ransack
