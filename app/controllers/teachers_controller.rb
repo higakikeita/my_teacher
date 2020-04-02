@@ -93,6 +93,6 @@ private
     @q        = Teacher.ransack(params[:q])
   end
   def search_params
-    params.require(:q).permit!
+    params.permit(:q)
   end
 end

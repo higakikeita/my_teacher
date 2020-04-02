@@ -1,31 +1,6 @@
 =render "teachersheader"
 .main-section
-  #navArea
-  
-    %nav-a
-      .inner
-        %ul
-        
-        %li
-          =link_to "TOPへ戻る",root_path
-        %li
-          =link_to "お気に入り一覧へ",teacher_clips_path(:teacher_id)
-        %li
-          %a{:href => "#index1"} みんながいいねした先生
-        %li
-          %a{:href => "#index2"} 学年別選択
-        %li
-          %a{:href => "#index3"} 科目別選択
-        %li
-          %a{:href => "#"} 無料サポート
-        %li
-          %a{:href => "#"} 家庭教師ワイズについて
-    .toggle_btn
-      %span
-      %span
-      %span
-      
-    #mask
+  =render "hunburger"
   
   %header.masthead.text-white.text-center
     .overlay
@@ -40,10 +15,10 @@
             = image_tag 'teacher.jpg', alt: 'swipe02',id:"swiper-image"
           .swiper-slide
             = image_tag 'kotaro.jpg', alt: 'swipe03',id:"swiper-image"
-        -# if need navigation button 
-      .swiper-button-prev
-      .swiper-button-next
-      -# if need pagination 
+          -# if need navigation button 
+        .swiper-button-prev
+        .swiper-button-next
+        -# if need pagination 
         .swiper-pagination
   .pickup-section.effect-fade
     .pickup-section__header
@@ -339,9 +314,8 @@
         %ul.pickup-section__main--teachers
           - @english.each do |teacher|
             = render "teacher", teacher: teacher
--#   = render "bottom"
+  -#   = render "bottom"
 
 = render "register-tab"
-
 =render "teachersfooter"
 
