@@ -1,18 +1,18 @@
 %nav.navbar.navbar-light.bg-light.static-top
   %li.container{href: "https://school-wise.jp/"} 
-    %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "20%"}/
+    %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "15%"}/
     
-    = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
-      = f.search_field :name_cont,  class: 'form-a', placeholder: '何かお探しですか？', id: "form-a__box"
-    .search-buttom
-    =button_tag "検索する",type:'submit',class:'search-button'
+  = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
+    = f.search_field :name_cont,  class: 'form-a', placeholder: '何かお探しですか？', id: "form-a__box"
+    
+    =f.submit "検索する",type:'submit',class:'search-button-c'
 
 
-    .more-information
+  .more-information
     お問い合わせ<br> 0120-446-104
   .header__contents__below__personal__mypage
     %span.fas.fa-user-circle.login__icon
-  -if user_signed_in?
-    =link_to "マイページ", user_path(current_user.id),class:"mypage"
+    -if user_signed_in?
+      =link_to "マイページ", user_path(current_user.id),class:"mypage"
       
 
