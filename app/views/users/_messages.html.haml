@@ -1,0 +1,19 @@
+%h4 ＜コメント一覧＞  
+.comments-block
+  - if @user.messages
+    - @user.messages.each do |message|
+      .one-block
+        =@user.name
+        .item-comment
+          = simple_format(message.message)
+      .pagenation
+    = paginate @messages
+.message-content
+  %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+- if current_user
+  = form_for [@user,@message] do |c|
+    =c.text_area :message,class:"text_area-default"
+    =c.submit 'コメントする',class:"text_area-default_btn"
+- else
+  .not-comment
+    コメントはできません   
