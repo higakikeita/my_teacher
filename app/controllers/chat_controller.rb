@@ -12,7 +12,9 @@ class ChatController < ApplicationController
   end
   def show
     chat_room = ChatRoom.find_by(id: params[:id])
-    @chat_room_user = chat_room.chat_room_users.find_by(user_id:params[:id])
-    @chat_messages = ChatMessage.where(chat_room: chat_room).order(:created_at)
+    @chat_room_user = chat_room.chat_room_users.find_by(user_id:current_user.id)
+
+    @chat_messages = ChatMessage.where(chat_room: chat_room.id).order(:created_at)
+    
   end
 end

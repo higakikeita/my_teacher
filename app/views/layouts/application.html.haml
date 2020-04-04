@@ -2,6 +2,8 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "#{current_user.id if current_user}", :name => "current_user_id"}/
+
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
     %title MyTeacher

@@ -10,7 +10,7 @@
         = @chat_room_user.user.name
       .container
         .messagesArea.messages
-          = render @chat_messages
+          = render partial:"chat_messages/chat_message",locals:{chat_messages:@chat_messages}
       %form.messageInputForm
         .container
           %input.messageInputForm_input{"data-behavior" => "room_speaker", :placeholder => "メッセージを入力...", :type => "text"}/
