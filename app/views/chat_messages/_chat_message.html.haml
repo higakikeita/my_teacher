@@ -1,0 +1,10 @@
+.message
+  %span.message__name
+    = chat_message.user.name
+    \:
+  - if chat_message.user.id == current_user.id
+    .message__text.message_current_user
+      %div= chat_message.message
+  - else
+    .message__text
+      %div= chat_message.message
