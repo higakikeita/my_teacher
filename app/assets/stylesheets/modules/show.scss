@@ -167,7 +167,10 @@
    
   }
 }
-
+a.teacher-details-edit__btn{
+  background:$Red;
+    @include product-buy;
+}
 .btn--gray{
   padding-bottom:30px;
 }

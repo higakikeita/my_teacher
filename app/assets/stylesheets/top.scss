@@ -114,19 +114,20 @@ footer.footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
+    
+
     &_title {
       margin-top: 12vh;
     }
     &_btn {
-      display: block;
+      
       max-width: 400px;
       padding: 20px;
-      margin: 0 auto;
+      
       border-radius: 30px;
       background: #fd5068;
       color: #fff;
-      margin-top: 100px;
+      margin-top: 200px;
       z-index: 5;
       position: absolute;
       display: inline-block;
