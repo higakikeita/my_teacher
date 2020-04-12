@@ -7,14 +7,7 @@
     %meta{:content => "", :name => "description"}/
     %meta{:content => "", :name => "author"}/
     %title Landing Page - Start Bootstrap Theme
-    / Bootstrap core CSS
-    -# %link{:href => "vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet"}/
-    / Custom fonts for this template
-    -# %link{:href => "vendor/fontawesome-free/css/all.min.css", :rel => "stylesheet"}/
-    -# %link{:href => "vendor/simple-line-icons/css/simple-line-icons.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
-    / Custom styles for this template
-    -# %link{:href => "css/landing-page.min.css", :rel => "stylesheet"}/
+    
   %body
     / Navigation
     =render "headcontainer"
@@ -23,17 +16,15 @@
       .overlay
         .container
         .row
-        -# .swiper__text
-        -#   .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
-        -#   入会金や退会金は一切かかりません。
-          .col-md-10.col-lg-8.col-xl-7.mx-auto
-            %form
-              .form-row__top
-              -if user_signed_in?
-                = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
-              - else
-                = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
+          
         .swiper-container.swiper1
+          
+          %form
+            -# .form-row__top
+            -if user_signed_in?
+              = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
+            - else
+              = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
           -# slide wrapper
           .swiper-wrapper
             -# slides
@@ -42,35 +33,21 @@
               .swiper__text
                 .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
                 入会金や退会金は一切かかりません。
-                .swiper__link--tag
-                -if user_signed_in?
-                  = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
-                - else
-                  = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
             .swiper-slide
               = image_tag 'p1.jpg', alt: 'swipe02',id:"swiper-image"
               .swiper__text
                 .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
                 入会金や退会金は一切かかりません。
-                .swiper__link--tag
-                -if user_signed_in?
-                  = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
-                - else
-                  = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
             .swiper-slide
               = image_tag 'achieve.jpg', alt: 'swipe03',id:"swiper-image"
               .swiper__text
                 .swiper__text--large プロ家庭教師のワイズで一緒に頑張ってみませんか?
                 入会金や退会金は一切かかりません。
-                .swiper__link--tag
-                -if user_signed_in?
-                  = link_to "講師一覧はこちら", teachers_path,class:"btn loginPage_contents_btn"
-                - else
-                  = link_to "講師一覧はこちら",new_user_session_path,class:"btn loginPage_contents_btn"
+        
           -# if need navigation button 
         .swiper-button-prev.prev1
         .swiper-button-next.next1
-        -# if need pagination 
+          -# if need pagination 
         .swiper-pagination.page1
       -# .row
       -#   .col-xl-9.mx-auto
