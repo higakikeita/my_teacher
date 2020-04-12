@@ -9,12 +9,9 @@ class LikesController < ApplicationController
     end
   end
   def destroy
-    @like = Like.find_by(like_params)
-    
+    @like = Like.find_by(id:params[:id])
     @teacher = @like.teacher
-    
     if @like.destroy
-      
       respond_to :js
     end
   end
