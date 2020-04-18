@@ -35,4 +35,5 @@ scope :category, ->(category_id) {where(category_id: category_id).order(created_
 scope :subject, ->(subject) {where(subject: subject).order(created_at: "DESC").limit(10)}
 extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
+  
 end
