@@ -7,7 +7,8 @@
     
     -# =f.submit "検索する",type:'submit',class:'search-button-c'
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
-    = f.search_field :prefecture_eq,  class: 'form-a', placeholder: '住所で検索', id: "form-a__box"
+    
+    = f.collection_select :prefecture_in,Teacher.prefectures.keys,{},:prefecture_i18n,class: 'form-a', placeholder: '住所で検索', id: "form-a__box"
     
     -# =f.submit "検索する",type:'submit',class:'search-button-c'
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
