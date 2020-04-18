@@ -11,13 +11,14 @@
 <img src="https://user-images.githubusercontent.com/57832553/73935917-fec20580-4924-11ea-9b42-36715e8d4ede.png" height="60px;" style="max-width:100%;">
 
 # 家庭教師派遣センターのwebサイト
-# 生徒側からの機能
-# 特徴その１
-## 自分に合った講師を探すことが出来ます
-# 特徴その２
-## ユーザー同士でリアルタイムチャットができます
-# 講師側からの機能
-講師登録が出来ます。
+## 生徒側からの機能
+### 特徴その１
+ 生徒にマッチした講師を探すことが出来ます
+### 特徴その２
+それぞれのユーザーの情報を見ることが出来ます
+ユーザー同士でリアルタイムチャットができます
+## 講師側からの機能
+講師登録が出来ます。<br>
 自分の都合の良い日を登録出来ます
 ## トップ画面
 [![Image from Gyazo](https://i.gyazo.com/0654ab59c02fe8bd97ef7811ed4c8704.png)](https://gyazo.com/0654ab59c02fe8bd97ef7811ed4c8704)
@@ -39,23 +40,21 @@ http://13.112.152.26/
 ## Basic 認証
 ユーザー名　admin
 パスワード　0322
-* Ruby version 2.5.1
+## バージョン情報
+* Ruby version 2.5.1<br>
+  Ruby on rails 5.0.7.2<br>
+  MySQl 5.3<br>
+  AWS EC2 x S3
 
-* System dependencies
+## サーバデプロイ
+Nginx x Capistrono
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## DB設計
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
 ## teachersテーブル
 |Column|Type|Options|
 |------|----|-------|
