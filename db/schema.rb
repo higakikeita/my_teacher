@@ -92,27 +92,19 @@ ActiveRecord::Schema.define(version: 20200418132458) do
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
 
-  create_table "reactions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "to_user_id",   null: false
-    t.integer  "from_user_id", null: false
-    t.integer  "status",       null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.text     "explain",     limit: 65535
+    t.text     "explain",       limit: 65535
     t.integer  "university"
     t.integer  "style"
     t.integer  "sex"
     t.integer  "career"
     t.integer  "category_id"
-    t.integer  "prefecture"
+    t.integer  "prefecture_id"
     t.integer  "subject"
     t.integer  "user_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["user_id"], name: "index_teachers_on_user_id", using: :btree
   end
 

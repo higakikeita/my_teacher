@@ -8,7 +8,7 @@ class CreateTeachers < ActiveRecord::Migration[5.0]
       t.integer :sex
       t.integer :career
       t.integer :category_id
-      t.integer :prefecture
+      t.integer :prefecture_id
       t.integer :subject
       t.references :user,index: true, foreign_key: true
       t.timestamps

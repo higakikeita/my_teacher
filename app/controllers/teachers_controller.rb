@@ -76,7 +76,7 @@ before_action :set_ransack
   
 private
   def teacher_params
-    params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:subject,:prefecture,:university,images_attributes:[:teacher_image,:id]).merge(user_id: current_user.id)
+    params.require(:teacher).permit(:name,:category_id,:price,:explain,:sex,:subject,:prefecture_id,:university,images_attributes:[:teacher_image,:id]).merge(user_id: current_user.id)
   end
   def update_params
     params.require(:teacher).permit(:name, :explain,:sex, :university, :category_id, :status,:category_id, :prefecture,:subject, :user_id, images_attributes: [:teacher_image, :id])
