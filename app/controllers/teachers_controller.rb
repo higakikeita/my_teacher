@@ -24,6 +24,7 @@ before_action :set_ransack
   end
   def create
     @teacher = Teacher.new(teacher_params)
+    
     if @teacher.images.present?
     @teacher.save
       redirect_to teachers_path
