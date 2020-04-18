@@ -93,6 +93,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -313,6 +315,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  enum_help (~> 0.0.15)
   erb2haml
   fog-aws
   font-awesome-sass
