@@ -26,13 +26,9 @@ before_action :set_ransack
     @teacher = Teacher.new(teacher_params)
     if @teacher.images.present?
     @teacher.save
-    
       redirect_to teachers_path
-    
-      
     else
       redirect_to root_path
-    
     end
   end
   def show
@@ -49,13 +45,11 @@ before_action :set_ransack
     
   end
   def update
-    
     if @teacher.update(update_params)
       redirect_to teacher_path
     else
       render :edit
     end
-
   end
   def search_child
     respond_to do |format|
