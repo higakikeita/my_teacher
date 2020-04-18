@@ -5,7 +5,7 @@
   position: relative;
   z-index: 3;
   position: fixed;
-  
+ 
     
     
 
@@ -131,4 +131,26 @@
   top: -10px;
   outline : none;
 }
+}
+.teacher-header__top{
+  margin:10px;
+  height:70px;
+  // background-image: image-url('bookshell.jpg');
+  background-color:#999;
+
+  padding: 10px 35px 5px 0;
+  
+  width: 100%;
+  top: 0;
+  display:flex;
+  justify-content: flex-end;
+  
+}
+.search-header__top{
+  padding: 40px;
+  height:70px;
+  
+  width: 100%;
+  
+  display: flex;
 }

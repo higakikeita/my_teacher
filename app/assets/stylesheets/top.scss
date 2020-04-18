@@ -148,9 +148,11 @@ footer.footer {
   padding: 10px;
 }
 ul.navbar.navbar-light.bg-light.static-top{
+  margin:10px;
+
   display:flex;
   justify-content:space-between;
-  
+  background-image: image-url("bookshell.jpg");
 }
 ul.navbar.navibar-right{
   display: flex;
