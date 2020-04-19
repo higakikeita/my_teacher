@@ -71,11 +71,13 @@ Nginx x Capistrono
 |user|references|index: true, foreign_key: true|
 ### Association
 -belongs_to : user<br>
+-belongs_to : prefecture<br>
 -has_many :images<br>
 -has_many :likes<br>
 -has_many :clips<br>
 -has_many :comments<br>
--has_many :messages
+-has_many :messages<br>
+
 
 ## imagesテーブル
 |Column|Type|Options|
@@ -178,3 +180,16 @@ Nginx x Capistrono
 ### Association
 -belongs_to :chat_room<br>
 -belongs_to :user
+## Adress
+|Column|Type|Options|
+|------|----|-------|
+|prefecture_id|integer|
+|city|string|
+### Association
+-belong_to :prefecture
+
+## prefecture
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|
+|name|string|
