@@ -9,21 +9,23 @@
       =link_to "マイページ", user_path(current_user.id),class:"mypage"
 .search-header__top
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
-    = f.search_field :name_cont,  class: 'form-a', placeholder: '講師名で検索', id: "form-a__box"
+    = f.search_field :explain_cont,  class: 'form-a', placeholder: 'キーワードで検索', id: "form-a__box"
     
-    -# =f.submit "検索する",type:'submit',class:'search-button-c'
+    =f.submit "検索する",type:'submit',class:'search-button-c'
+  
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
     
     = f.collection_select :prefecture_id_eq,Prefecture.all,:id,:name,{},{class:'form-a'}
     
     =f.submit "検索する",type:'submit',class:'search-button-c'
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
-    = f.search_field :name_cont,  class: 'form-a', placeholder: '講師名で検索', id: "form-a__box"
-
+    = f.search_field :name_cont,  class: 'form-a', placeholder: '科目で検索', id: "form-a__box"
+    =f.submit "検索する",type:'submit',class:'search-button-c'
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
-    = f.search_field :explain_cont,  class: 'form-a', placeholder: 'キーワードで検索', id: "form-a__box"
+    = f.search_field :name_cont,  class: 'form-a', placeholder: '講師名で検索', id: "form-a__box"
     
     =f.submit "検索する",type:'submit',class:'search-button-c'
-  
+.search-header__details  
+  .search-button{type: "submit"} 詳細検索をする
       
 
