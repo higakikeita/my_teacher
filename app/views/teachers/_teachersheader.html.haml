@@ -26,6 +26,14 @@
     
     =f.submit "検索する",type:'submit',class:'search-button-c'
 .search-header__details  
-  .search-button{type: "submit"} 詳細検索をする
-      
+
+  %a.js-modal-open{:href => ""} クリックでモーダルを表示
+  .modal.js-modal
+    .modal__bg.js-modal-close
+    .modal__content
+      %p ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。
+      %a.js-modal-close{:href => ""} 閉じる
+  / modal__inner
+/ modal
+
 
