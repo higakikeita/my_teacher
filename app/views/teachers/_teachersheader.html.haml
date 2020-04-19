@@ -1,8 +1,15 @@
-.teacher-header__top
-  -# %li.container{href: "https://school-wise.jp/"} 
-  -#   %img#head_logo_wise{alt: "head_logo_wise", height: "", src: "https://school-wise.jp/wp-content/themes/school-wise/images/head_logo_wise.jpg", width: "15%"}/
-  .more-information
-    お問い合わせ<br> 0120-446-104
+%ul.teacher-header__top
+  %li
+    %a{:href => "/"} Wise
+  %li
+    %a{:href => "/"} About
+  %li
+    %a{:href => "/"} お問い合わせ<br>0120-446-104
+  %li
+    %a{:href => "/"} 
+
+  
+  
   .header__contents__below__personal__mypage
     %span.fas.fa-user-circle.login__icon
     -if user_signed_in?
@@ -42,7 +49,7 @@
         社会人(女)
         = f.radio_button :sex_eq, 3
         =f.submit "検索する",type:'submit',class:'search-button-c'
-        
+
       = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
         = f.radio_button :subject_eq,'',{:checked => true}
         小学算数

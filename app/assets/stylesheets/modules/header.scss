@@ -132,8 +132,9 @@
   outline : none;
 }
 }
-.teacher-header__top{
-  
+ul.teacher-header__top{
+  float:left;
+	list-style-type:none;
   height:70px;
   // background-image: image-url('bookshell.jpg');
   background-color:rgb(5, 18, 88);
@@ -149,7 +150,7 @@
 .search-header__top{
   padding: 40px;
   height:60px;
-  background-color: rgb(102, 84, 206);
+  background-color: rgb(172, 172, 175);
   width: 100%;
   
   display: flex;
@@ -160,6 +161,6 @@
 .search-header__details{
   height: 50px;
   width: 100%;
-  background-color: rgb(243, 233, 97);
+  background-color: rgb(223, 222, 217);
   text-align: center;
 }
