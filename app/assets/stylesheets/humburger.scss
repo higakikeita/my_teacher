@@ -10,13 +10,14 @@ nav-a {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   transition: .5s;
-  z-index: 3;
+  z-index: 1000;
 }
 .open nav-a {
   left: 0;
 }
 nav-a .inner {
   padding: 25px;
+  z-index: 1000;
 }
 nav-a .inner ul {
   list-style: none;
@@ -131,7 +132,7 @@ nav-a .inner ul li a:hover {
   transform: translate(0, 0);
   transition: all .5s;
   cursor: pointer;
-  z-index: 3;
+  z-index: 1000;
 }
 .open .toggle_btn {
   left: 330px;

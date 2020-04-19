@@ -90,6 +90,6 @@ private
     
   end
   def search_params
-    params.require(:q).permit(:sorts,:search_order,:name_cont,:brand_cont,:size_id_eq,:status_eq,:postage_eq,:purchase_status_id_eq,:category_grandparent_id_eq,:category_parent_id_eq,:category_id_eq,:sex_eq,:explain_cont,:prefecture_id_eq)
+    params.require(:q).permit(:sorts,:search_order,:name_cont,:brand_cont,:size_id_eq,:status_eq,:postage_eq,:purchase_status_id_eq,:subject_eq,:category_grandparent_id_eq,:category_parent_id_eq,:category_id_eq,:sex_eq,:explain_cont,:prefecture_id_eq)
   end
 end

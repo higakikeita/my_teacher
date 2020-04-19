@@ -1,19 +1,19 @@
-%ul.teacher-header__top
+%ul.teacher-header__top#gnav
   %li
-    %a{:href => "/"} Wise
+    %a{:href => "/"} Wiseについて
   %li
-    %a{:href => "/"} About
+    %a{:href => "/"} 料金案内
   %li
-    %a{:href => "/"} お問い合わせ<br>0120-446-104
+    %a{:href => "/"} Recruit
   %li
-    %a{:href => "/"} 
+    %a{:href => "/"} お問い合わせ
+  %li
+    -if user_signed_in?
+      =link_to "マイページ", user_path(current_user.id),class:"mypage"
 
   
   
-  .header__contents__below__personal__mypage
-    %span.fas.fa-user-circle.login__icon
-    -if user_signed_in?
-      =link_to "マイページ", user_path(current_user.id),class:"mypage"
+  
 .search-header__top
   = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
     = f.search_field :explain_cont,  class: 'form-a', placeholder: 'キーワードで検索', id: "form-a__box"
@@ -53,25 +53,25 @@
       = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
         = f.radio_button :subject_eq,'',{:checked => true}
         小学算数
-        = f.radio_button :subject_eq, 0| 0
+        = f.radio_button :subject_eq, 0
         小学国語
-        = f.radio_button :subject_eq, 1| 1
+        = f.radio_button :subject_eq, 1
         小学理科、社会
-        = f.radio_button :subject_eq, 2| 2
+        = f.radio_button :subject_eq, 2
         中学受験算数
-        = f.radio_button :subject_eq, 3| 3
+        = f.radio_button :subject_eq, 3
         中学受験国語
-        = f.radio_button :subject_eq, 4| 4
+        = f.radio_button :subject_eq, 4
         中学生英語
-        = f.radio_button :subject_eq, 5| 5
+        = f.radio_button :subject_eq, 5
         中学生国語
-        = f.radio_button :subject_eq, 6| 6
+        = f.radio_button :subject_eq, 6
         中学生数学
-        = f.radio_button :subject_eq, 7| 7
+        = f.radio_button :subject_eq, 7
         大学受験数学
-        = f.radio_button :subject_eq, 8| 8
+        = f.radio_button :subject_eq, 8
         大学受験英語
-        = f.radio_button :subject_eq, 9| 9
+        = f.radio_button :subject_eq, 9
         =f.submit "検索する",type:'submit',class:'search-button-c'
       %a.js-modal-close{:href => ""} 閉じる
   / modal__inner

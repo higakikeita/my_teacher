@@ -152,7 +152,7 @@ ul.teacher-header__top{
   height:60px;
   background-color: rgb(172, 172, 175);
   width: 100%;
-  
+  margin-top: 70px;
   display: flex;
 }
 .more-infomation{
@@ -163,4 +163,65 @@ ul.teacher-header__top{
   width: 100%;
   background-color: rgb(223, 222, 217);
   text-align: center;
+}
+#gnav {
+  // background-color: #fff;
+  -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+}
+
+#gnav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+#gnav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#gnav li {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  padding: 0 24px;
+  letter-spacing: .05em;
+}
+
+#gnav li a {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: #fff;
+}
+
+#gnav li a:hover {
+  opacity: 1;
+}
+
+#gnav li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+
+#gnav li a:hover::after {
+  width: 100%;
 }
