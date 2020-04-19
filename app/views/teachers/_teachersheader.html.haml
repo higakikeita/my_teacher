@@ -27,11 +27,34 @@
     =f.submit "検索する",type:'submit',class:'search-button-c'
 .search-header__details  
 
-  %a.js-modal-open{:href => ""} クリックでモーダルを表示
+  %a.js-modal-open{:href => ""} もっと詳細を検索する
   .modal.js-modal
     .modal__bg.js-modal-close
     .modal__content
-      %p ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。
+      = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
+        
+        学生(男)
+        = f.radio_button :sex_eq, 0
+        学生(女)
+        = f.radio_button :sex_eq, 1
+        社会人(男)
+        = f.radio_button :sex_eq, 2
+        社会人(女)
+        = f.radio_button :sex_eq, 3
+        =f.submit "検索する",type:'submit',class:'search-button-c'
+      = search_form_for(@q,url:teacher_search_path(:teache_id)) do |f|
+        = f.radio_button :subject_eq,'',{:checked => true}
+        = f.radio_button :subject_eq, 0| 0
+        = f.radio_button :subject_eq, 1| 1
+        = f.radio_button :subject_eq, 2| 2
+        = f.radio_button :subject_eq, 3| 3
+        = f.radio_button :subject_eq, 4| 4
+        = f.radio_button :subject_eq, 5| 5
+        = f.radio_button :subject_eq, 6| 6
+        = f.radio_button :subject_eq, 7| 7
+        = f.radio_button :subject_eq, 8| 8
+        = f.radio_button :subject_eq, 9| 9
+        =f.submit "検索する",type:'submit',class:'search-button-c'
       %a.js-modal-close{:href => ""} 閉じる
   / modal__inner
 / modal
